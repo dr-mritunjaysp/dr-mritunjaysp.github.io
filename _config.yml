@@ -2,11 +2,11 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: "<span style='color:#00c6ff;'>Mritunjay</span> <span style='color:#ff6ec7;'>Shall</span> <span style='color:#ffd700;'>Peelam</span>"
+title: blank # the website title (if blank, full name will be used instead)
+first_name: Mritunjay
+middle_name: Shall
+last_name: Peelam
 
-first_name: ""
-middle_name: ""
-last_name: ""
 contact_note: >
   You can even add a little note about which of these is the best way to reach you.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
