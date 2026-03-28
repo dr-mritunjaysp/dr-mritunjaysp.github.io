@@ -1,12 +1,13 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <b> &#x2022; </b> <b>Assistant Professor (Selection Grade) at </b> <a href="https://www.upes.ac.in/">UPES Dehradun</a> 
-&#x2022; <b>PhD</b> from <a href="https://www.bits-pilani.ac.in/">BITS Pilani</a> <br/> 
-&#x2022; <b>M.Tech</b> from <a href="https://www.ipu.ac.in/">USICT, New Delhi</a> 
-&#x2022; <b>Research Areas:</b> Blockchain, IoT, Edge AI, Multimodal Machine Learning
 
+subtitle: >
+  <b>&#x2022;</b> <b>Assistant Professor (Selection Grade) at</b> <a href="https://www.upes.ac.in/">UPES Dehradun</a> 
+  &#x2022; <b>PhD</b> from <a href="https://www.bits-pilani.ac.in/">BITS Pilani</a> <br/>
+  &#x2022; <b>M.Tech</b> from <a href="https://www.ipu.ac.in/">USICT, New Delhi</a> 
+  &#x2022; <b>Research Areas:</b> Blockchain, IoT, Edge AI, Multimodal ML
 
 profile:
   align: left
