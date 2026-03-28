@@ -14,10 +14,10 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
- Hubble 2nd Floor Section-A <br/>
-  P.O. Bidholi Via Prem Nagar <br/>
-  Dehradun, Misraspatti <br/>
-  Uttarakhand – 248007
+  <p>Hubble 2nd Floor Section-A</p>
+  <p>P.O. Bidholi Via Prem Nagar</p>
+  <p>Dehradun, Misraspatti</p>
+  <p>Uttarakhand – 248007</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
