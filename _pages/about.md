@@ -2,20 +2,18 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: 
+<b> &#x2022; </b> <b>Assistant Professor (Selection Grade) at </b> <a href="https://www.upes.ac.in/">UPES Dehradun</a> 
+&#x2022; <b>PhD</b> from <a href="https://www.bits-pilani.ac.in/">BITS Pilani</a> <br/> 
+&#x2022; <b>M.Tech</b> from <a href="https://www.ipu.ac.in/">USICT, New Delhi</a> 
+&#x2022; <b>Research Areas:</b> Blockchain, IoT, Edge AI, Multimodal Machine Learning
 
 profile:
   align: left
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-<b> &#x2022; </b> <b>Assistant Professor (Selection Grade) at </b> <a href="https://www.upes.ac.in/">UPES Dehradun</a> 
-&#x2022; <b>PhD</b> from <a href="https://www.bits-pilani.ac.in/">BITS Pilani</a> 
-&#x2022; <b>Post-Doc Research Aspirant</b> <br/>
 
-&#x2022; <b>Research Areas:</b> Blockchain, Intelligent Transportation Systems, Edge AI, IoT & Multimodal ML 
-&#x2022; <b>Published in</b> IEEE IoT Journal, IEEE TITS, IEEE TCE, IEEE Access, Wiley & Elsevier 
-&#x2022; <b>Experience:</b> 8+ Years Teaching & Research
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
