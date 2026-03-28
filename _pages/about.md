@@ -33,7 +33,17 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+<!-- I am currently an Assistant Professor at [UPES Dehradun](https://www.upes.ac.in/). Previously, I worked as an Assistant Professor at PSIT Kanpur and as a Programming Language Trainer at Tejas Engineers Academy, New Delhi. I completed my PhD from [BITS Pilani](https://www.bits-pilani.ac.in/) under Prof. Vinay Chamola. -->
+
+I am currently an Assistant Professor (Selection Grade) at [UPES Dehradun](https://www.upes.ac.in/). Previously, I worked as an Assistant Professor at Pranveer Singh Institute of Technology (PSIT), Kanpur, and as a Programming Language Trainer at Tejas Engineers Academy, New Delhi, where I trained students in core computer science subjects.
+
+I completed my PhD from [BITS Pilani](https://www.bits-pilani.ac.in/) under the supervision of Prof. Vinay Chamola. My research focuses on blockchain-based solutions for intelligent transportation systems, integrating technologies such as Blockchain, Internet of Things (IoT), Edge AI, Federated Learning, and Multimodal Machine Learning.
+
+I have published several research articles in reputed journals and conferences, including IEEE Internet of Things Journal, IEEE Transactions on Intelligent Transportation Systems, IEEE Transactions on Consumer Electronics, IEEE Access, Wiley, and Elsevier. I have also presented my work at international conferences such as IEEE GLOBECOM.
+
+I consider myself a researcher focused on solving real-world problems using advanced technologies. I am particularly interested in developing secure, scalable, and intelligent systems, especially in domains such as transportation and smart environments.
+
+As part of my research, I am primarily interested in Blockchain, IoT, Edge AI, Federated Learning, and Multimodal Machine Learning. I also work on topics related to intelligent systems, distributed computing, and emerging technologies.
 
 Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
