@@ -2,17 +2,17 @@
 layout: about
 title: about
 permalink: /
-subtitle: 
-<b> &#x2022; </b> <b>Assistant Professor (Selection Grade) at </b> <a href="https://www.upes.ac.in/">UPES Dehradun</a> 
+subtitle: <b> &#x2022; </b> <b>Assistant Professor (Selection Grade) at </b> <a href="https://www.upes.ac.in/">UPES Dehradun</a> 
 &#x2022; <b>PhD</b> from <a href="https://www.bits-pilani.ac.in/">BITS Pilani</a> <br/> 
 &#x2022; <b>M.Tech</b> from <a href="https://www.ipu.ac.in/">USICT, New Delhi</a> 
 &#x2022; <b>Research Areas:</b> Blockchain, IoT, Edge AI, Multimodal Machine Learning
+
 
 profile:
   align: left
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
+  more_info: 
 
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
