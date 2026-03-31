@@ -4,15 +4,15 @@ title: About
 permalink: /
 
 subtitle: >
-  <b>&#x2022;</b> <b>Assistant Professor (Selection Grade) at</b> <a href="https://www.upes.ac.in/">UPES Dehradun</a> 
+  <b>&#x2022;</b> <b>Assistant Professor (Selection Grade) at</b> <a href="https://www.upes.ac.in/">UPES Dehradun</a>
   &#x2022; <b>Ph.D.</b> from <a href="https://www.bits-pilani.ac.in/">BITS Pilani Pilani Campus</a> <br/>
-  &#x2022; <b>M.Tech</b> from <a href="https://www.ipu.ac.in/">USICT, New Delhi India</a> 
+  &#x2022; <b>M.Tech</b> from <a href="https://www.ipu.ac.in/">USICT, New Delhi India</a>
   &#x2022; <b>Research Areas:</b> Blockchain, IoT, Edge AI, Multimodal ML
 
 profile:
   align: left
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
 address: >
   <p>Hubble 2nd Floor Section-A</p>
   <p>P.O. Bidholi Via Prem Nagar</p>
