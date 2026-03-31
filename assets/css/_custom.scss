@@ -12,3 +12,10 @@
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
 }
+
+.profile img {
+  width: 150px;        /* control size */
+  height: 150px;       /* must be same as width */
+  border-radius: 50%;  /* makes circle */
+  object-fit: cover;   /* crops properly */
+}
