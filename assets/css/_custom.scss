@@ -14,8 +14,10 @@
 }
 
 .profile img {
-  width: 150px;        /* control size */
-  height: 150px;       /* must be same as width */
-  border-radius: 50%;  /* makes circle */
-  object-fit: cover;   /* crops properly */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
