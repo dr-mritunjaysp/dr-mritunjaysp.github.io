@@ -35,7 +35,7 @@ latest_posts:
 
 <!-- I am currently an Assistant Professor at [UPES Dehradun](https://www.upes.ac.in/). Previously, I worked as an Assistant Professor at PSIT Kanpur and as a Programming Language Trainer at Tejas Engineers Academy, New Delhi. I completed my PhD from [BITS Pilani](https://www.bits-pilani.ac.in/) under Prof. Vinay Chamola. -->
 
-I am currently an Assistant Professor (Selection Grade) at [UPES Dehradun](https://www.upes.ac.in/). Previously, I worked as an Assistant Professor at Pranveer Singh Institute of Technology (PSIT), Kanpur, and as a Programming Language Trainer at Tejas Engineers Academy, New Delhi, where I trained students in core computer science subjects.
+I am currently an Assistant Professor (Selection Grade) at [UPES Dehradun, Uttarakhand](https://www.upes.ac.in/). Previously, I worked as an Assistant Professor at Pranveer Singh Institute of Technology (PSIT), Kanpur, and as a Programming Language Trainer at Tejas Engineers Academy, New Delhi, where I trained students in core computer science subjects.
 
 I completed my PhD from [BITS Pilani](https://www.bits-pilani.ac.in/) under the supervision of Prof. Vinay Chamola. My research focuses on blockchain-based solutions for intelligent transportation systems, integrating technologies such as Blockchain, Internet of Things (IoT), Edge AI, Federated Learning, and Multimodal Machine Learning.
 
