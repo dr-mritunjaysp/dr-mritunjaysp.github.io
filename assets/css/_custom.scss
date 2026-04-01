@@ -98,3 +98,23 @@
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
 }
+
+
+.pub-link {
+  font-weight: 700; /* bold */
+  text-decoration: none;
+
+  background: linear-gradient(270deg, #00c6ff, #ff6ec7, #ffd700, #00c6ff);
+  background-size: 600% 600%;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradientText 1s linear infinite;
+}
+
+/* Animation */
+@keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
