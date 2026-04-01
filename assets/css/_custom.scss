@@ -128,3 +128,44 @@
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
 }
+
+
+/* Rectangular tags */
+.rect-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  margin-right: 6px;
+  margin-top: 5px;
+  border-radius: 4px;   /* rectangle look */
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid #ccc;
+  background: transparent;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* Q2 tag (green) */
+.rect-tag.q2 {
+  border-color: #4CAF50;
+  color: #4CAF50;
+}
+
+/* Scopus tag (orange) */
+.rect-tag.scopus {
+  border-color: #ff9800;
+  color: #ff9800;
+}
+
+/* Impact Factor tag (blue) */
+.rect-tag.if {
+  border-color: #00c6ff;
+  color: #00c6ff;
+}
+
+/* Hover effect */
+.rect-tag:hover {
+  background: currentColor;
+  color: #000;
+  cursor: default;
+}
