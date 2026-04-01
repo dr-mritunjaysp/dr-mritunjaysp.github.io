@@ -140,8 +140,8 @@ mark {
   padding: 0;
 }
 
-/* Make your name green + bold */
+/* Make ONLY your name green */
 .publications mark {
   color: #2ecc71 !important;
-  font-weight: 700 !important;
+  font-weight: 600;
 }
