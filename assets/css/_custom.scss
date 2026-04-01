@@ -157,10 +157,21 @@ mark {
 
 
 
-/* Force all header icons smaller */
+/* Reduce ALL header/contact icons */
+header .icon,
 header i,
 header svg {
-  font-size: 20px !important;
-  width: 20px !important;
-  height: 20px !important;
+  font-size: 18px !important;
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* If they are inside links */
+header a i {
+  font-size: 18px !important;
+}
+
+/* Extra strong override */
+.fa, .fab, .fas, .far {
+  font-size: 18px !important;
 }
