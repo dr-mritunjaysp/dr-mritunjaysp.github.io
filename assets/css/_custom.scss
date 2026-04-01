@@ -157,21 +157,12 @@ mark {
 
 
 
-/* Reduce ALL header/contact icons */
-header .icon,
-header i,
-header svg {
-  font-size: 18px !important;
-  width: 18px !important;
-  height: 18px !important;
+/* Reduce size of CV, Email, Scholar, WhatsApp icons */
+.contact-icons i {
+  font-size: 18px !important;   /* change size here */
 }
 
-/* If they are inside links */
-header a i {
-  font-size: 18px !important;
-}
-
-/* Extra strong override */
-.fa, .fab, .fas, .far {
+/* If icons look too big still */
+.contact-icons {
   font-size: 18px !important;
 }
