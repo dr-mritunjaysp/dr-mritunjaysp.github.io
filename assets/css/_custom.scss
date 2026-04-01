@@ -155,14 +155,12 @@ mark {
 }
 
 
-/* Reduce social/contact icon size */
-.social-icons a {
-  font-size: 20px !important;  /* adjust size (default ~30-40px) */
-}
 
-/* If icons are SVG/images */
-.social-icons img,
-.social-icons svg {
+
+/* Force all header icons smaller */
+header i,
+header svg {
+  font-size: 20px !important;
   width: 20px !important;
   height: 20px !important;
 }
