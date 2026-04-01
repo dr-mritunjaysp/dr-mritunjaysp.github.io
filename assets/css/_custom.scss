@@ -21,3 +21,24 @@
   border: 3px solid #ddd;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
+
+/* Email styling */
+.email-link {
+  color: #ff6ec7 !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.email-link:hover {
+  color: #00c6ff !important;
+  text-shadow: 0 0 8px rgba(0,198,255,0.6);
+  cursor: pointer;
+}
+
+/* Click effect */
+.email-link:active {
+  color: #ffd700 !important;
+}
