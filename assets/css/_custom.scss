@@ -140,8 +140,22 @@ mark {
   padding: 0;
 }
 
-/* Make ONLY your name green */
+/* Remove yellow background */
+mark {
+  background: none !important;
+  padding: 0;
+}
+
+/* Blinking green effect */
 .publications mark {
   color: #2ecc71 !important;
-  font-weight: 600;
+  font-weight: 700;
+  animation: blinkText 1s infinite;
+}
+
+/* Blink animation */
+@keyframes blinkText {
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
 }
