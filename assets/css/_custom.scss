@@ -40,13 +40,15 @@
 .profile {
   width: auto !important;
   max-width: 200px;   /* control image column */
+  margin-right: 0 !important; /* handled by flex gap */
 }
 
-/* Reduce space of text column */
+/* Align image + text side by side */
 .post .row,
 .page .row {
   display: flex;
   align-items: flex-start;
+  gap: 15px; /* clean spacing between image and text */
 }
 
 /* Remove Bootstrap column gap */
@@ -56,19 +58,13 @@
   padding-right: 0 !important;
 }
 
-/* Reduce space between image and text */
-.profile {
-  margin-right: 15px !important;
-}
-
-##############
-
-/* Justify text on the right side */
+/* Justify right-side text */
 .col-sm-8 {
   text-align: justify;
 }
 
-/* Optional: better readability */
+/* Optional: improve readability */
 .col-sm-8 p {
   text-align: justify;
+  line-height: 1.6;
 }
