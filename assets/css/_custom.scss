@@ -60,3 +60,15 @@
 .profile {
   margin-right: 15px !important;
 }
+
+##############
+
+/* Justify text on the right side */
+.col-sm-8 {
+  text-align: justify;
+}
+
+/* Optional: better readability */
+.col-sm-8 p {
+  text-align: justify;
+}
