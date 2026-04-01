@@ -33,3 +33,29 @@
   color: #00c6ff !important;
   text-shadow: 0 0 8px rgba(0,198,255,0.6);
 }
+
+
+/* Force image + text closer */
+.profile {
+  width: auto !important;
+  max-width: 200px;   /* control image column */
+}
+
+/* Reduce space of text column */
+.post .row,
+.page .row {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Remove Bootstrap column gap */
+.col-sm-4,
+.col-sm-8 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Reduce space between image and text */
+.profile {
+  margin-right: 15px !important;
+}
