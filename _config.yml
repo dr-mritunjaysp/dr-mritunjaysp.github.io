@@ -8,7 +8,8 @@ middle_name: Shall
 last_name: Peelam
 email: mritunjay.peelam@pilani.ac.in
 contact_note: >
-  The best way to reach me is via email — <a href="mailto:mritunjay.peelam@ddn.upes.ac.in" class="email-link">mritunjay.peelam@ddn.upes.ac.in</a>.
+  more_info: |
+  The best way to reach me is via email — <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mritunjay.peelam@ddn.upes.ac.in" class="email-link" target="_blank">mritunjay.peelam@ddn.upes.ac.in</a>.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
