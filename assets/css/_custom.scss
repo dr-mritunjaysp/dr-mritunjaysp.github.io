@@ -65,10 +65,8 @@
   text-justify: inter-word;
 }
 
-/* Target actual text container in al-folio */
-.about p,
-.post-content p,
-.page-content p {
+.about *,
+.post-content *,
+.page-content * {
   text-align: justify !important;
-  text-justify: inter-word;
 }
