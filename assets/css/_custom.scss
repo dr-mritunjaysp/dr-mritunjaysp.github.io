@@ -140,29 +140,16 @@ mark {
   padding: 0;
 }
 
-/* GREEN blinking name */
+/* Slow blinking green name */
 .publications mark {
   color: #2ecc71 !important;
   font-weight: 700;
-  animation: blinkGreen 1s infinite;
+  animation: slowBlink 2.5s infinite; /* slower */
 }
 
-/* RED blinking impact factor */
-.blink-red {
-  color: #ff0000 !important;
-  font-weight: 700;
-  animation: blinkRed 1s infinite;
-}
-
-/* Animations */
-@keyframes blinkGreen {
+/* Animation */
+@keyframes slowBlink {
   0%   { opacity: 1; }
-  50%  { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes blinkRed {
-  0%   { opacity: 1; }
-  50%  { opacity: 0; }
+  50%  { opacity: 0.3; }
   100% { opacity: 1; }
 }
