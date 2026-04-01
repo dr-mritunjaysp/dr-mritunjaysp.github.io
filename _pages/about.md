@@ -44,7 +44,3 @@ I have published several research articles in reputed journals and conferences, 
 I consider myself a researcher focused on solving real-world problems using advanced technologies. I am particularly interested in developing secure, scalable, and intelligent systems, especially in domains such as transportation and smart environments.
 
 As part of my research, I am primarily interested in Blockchain, IoT, Edge AI, Federated Learning, and Multimodal Machine Learning. I also work on topics related to intelligent systems, distributed computing, and emerging technologies.
-
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
