@@ -669,3 +669,16 @@ jsonresume:
   - languages
   - interests
   - references
+
+
+
+
+google_scholar_id: MdGRPEIAAAAJ&hl
+
+scholar:
+  source: ./_bibliography
+  sort_by: year
+  order: descending
+  group_by: year
+  group_order: descending
+  google_scholar: true
