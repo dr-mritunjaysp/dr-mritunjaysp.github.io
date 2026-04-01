@@ -1,11 +1,21 @@
 .post-title {
   font-weight: 700 !important;
+
   background: linear-gradient(270deg, #00c6ff, #ff6ec7, #ffd700, #00ff88);
-  background-size: 800% 800%;
+  background-size: 600% 600%;
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientShift 5s ease infinite;
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+
+  animation: gradientShift 1s linear infinite;
+
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
 @keyframes gradientShift {
