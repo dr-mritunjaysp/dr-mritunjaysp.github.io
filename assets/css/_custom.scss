@@ -134,27 +134,34 @@
 
 
 
-/* Remove default yellow highlight */
-mark {
-  background: none !important;
-  padding: 0;
-}
-
 /* Remove yellow background */
 mark {
   background: none !important;
   padding: 0;
 }
 
-/* Blinking green effect */
+/* Green blinking name */
 .publications mark {
   color: #2ecc71 !important;
   font-weight: 700;
-  animation: blinkText 1s infinite;
+  animation: blinkGreen 1s infinite;
 }
 
-/* Blink animation */
-@keyframes blinkText {
+/* Red blinking impact factor */
+.blink-red {
+  color: #ff0000 !important;
+  animation: blinkRed 1s infinite;
+  font-weight: 700;
+}
+
+/* Animations */
+@keyframes blinkGreen {
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes blinkRed {
   0%   { opacity: 1; }
   50%  { opacity: 0; }
   100% { opacity: 1; }
