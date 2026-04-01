@@ -35,35 +35,32 @@
 }
 
 
-/* Force image + text closer */
-.profile {
-  width: auto !important;
-  max-width: 200px;   /* control image column */
-  margin-right: 0 !important; /* handled by flex gap */
-}
-
-/* Align image + text side by side */
+/* Force layout */
 .post .row,
 .page .row {
   display: flex;
   align-items: flex-start;
-  gap: 15px; /* clean spacing between image and text */
+  gap: 15px;
 }
 
-/* Remove Bootstrap column gap */
+/* Image column */
+.profile {
+  width: auto !important;
+  max-width: 200px;
+}
+
+/* Remove padding */
 .col-sm-4,
 .col-sm-8 {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
-/* Justify right-side text */
-.col-sm-8 {
-  text-align: justify;
-}
-
-/* Optional: improve readability */
+/* 🔥 Strong justification fix */
+.post .col-sm-8,
+.page .col-sm-8,
+.col-sm-8,
 .col-sm-8 p {
-  text-align: justify;
-  line-height: 1.6;
+  text-align: justify !important;
+  text-justify: inter-word;
 }
