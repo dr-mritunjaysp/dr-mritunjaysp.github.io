@@ -65,8 +65,20 @@
   text-justify: inter-word;
 }
 
-.about *,
-.post-content *,
-.page-content * {
+/* Apply justification to all page content */
+.page-content p,
+.post-content p,
+.about p,
+.cv p,
+p {
   text-align: justify !important;
+  text-justify: inter-word;
+}
+
+/* Optional: improve readability */
+.page-content p,
+.post-content p,
+.about p,
+.cv p {
+  line-height: 1.7;
 }
