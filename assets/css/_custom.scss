@@ -140,18 +140,18 @@ mark {
   padding: 0;
 }
 
-/* Green blinking name */
+/* GREEN blinking name */
 .publications mark {
   color: #2ecc71 !important;
   font-weight: 700;
   animation: blinkGreen 1s infinite;
 }
 
-/* Red blinking impact factor */
+/* RED blinking impact factor */
 .blink-red {
   color: #ff0000 !important;
-  animation: blinkRed 1s infinite;
   font-weight: 700;
+  animation: blinkRed 1s infinite;
 }
 
 /* Animations */
