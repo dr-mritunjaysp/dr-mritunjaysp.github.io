@@ -65,20 +65,14 @@
   text-justify: inter-word;
 }
 
-/* Apply justification to all page content */
 .page-content p,
 .post-content p,
-.about p,
-.cv p,
-p {
+.post p,
+.page p,
+.container p {
   text-align: justify !important;
   text-justify: inter-word;
-}
-
-/* Optional: improve readability */
-.page-content p,
-.post-content p,
-.about p,
-.cv p {
-  line-height: 1.7;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  hyphens: auto;              /* 🔥 fixes uneven edges */
 }
