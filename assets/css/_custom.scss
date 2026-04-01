@@ -130,8 +130,17 @@
 }
 
 
-/* Make your name green + bold */
-.publications ol.bibliography li b {
+
+
+
+
+
+
+
+
+
+.my-name {
   color: #2ecc71 !important;
   font-weight: 700 !important;
+  font-style: normal !important; /* remove italic from <em> */
 }
