@@ -128,3 +128,10 @@
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
 }
+
+
+/* Make your name green + bold */
+.publications ol.bibliography li b {
+  color: #2ecc71 !important;
+  font-weight: 700 !important;
+}
