@@ -128,3 +128,20 @@
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
 }
+
+
+
+
+
+
+/* Remove default yellow highlight */
+mark {
+  background: none !important;
+  padding: 0;
+}
+
+/* Make your name green + bold */
+.publications mark {
+  color: #2ecc71 !important;
+  font-weight: 700 !important;
+}
