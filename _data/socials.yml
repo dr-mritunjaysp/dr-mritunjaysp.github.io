@@ -16,5 +16,5 @@ linkedin_username: mritunjay-shall-peelam
 youtube_id: "@msptutorial7884"
 custom_social:
   orcid:
-    logo: "fab fa-orcid"
+    logo: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/orcid.svg"
     url: "https://orcid.org/0000-0002-1234-5678"
