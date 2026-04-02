@@ -14,4 +14,7 @@ whatsapp_number: 8745080986# your WhatsApp number (full phone number in internat
 #   url: https://www.alberteinstein.com/
 linkedin_username: mritunjay-shall-peelam
 youtube_id: @msptutorial7884
-orcid_id: /0000-0002-8022-3815
+custom_social:
+  - title: ORCID
+    url: https://orcid.org/0000-0002-1234-5678
+    icon: fab fa-orcid
