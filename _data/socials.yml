@@ -17,4 +17,4 @@ youtube_id: @msptutorial7884
 custom_social:
   orcid:
     logo: "orcid.svg"            # ← just the filename, NOT a full URL
-    url: "https://orcid.org/0000-0002-1234-5678"
+    url: 0000-0002-1234-5678
