@@ -153,16 +153,3 @@ mark {
   50%  { opacity: 0.3; }
   100% { opacity: 1; }
 }
-
-
-
-
-/* Reduce size of CV, Email, Scholar, WhatsApp icons */
-.contact-icons i {
-  font-size: 30px !important;   /* change size here */
-}
-
-/* If icons look too big still */
-.contact-icons {
-  font-size: 18px !important;
-}
