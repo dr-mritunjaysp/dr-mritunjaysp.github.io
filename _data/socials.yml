@@ -14,3 +14,7 @@ whatsapp_number: 8745080986 # your WhatsApp number (full phone number in interna
 #   url: https://www.alberteinstein.com/
 linkedin_username: mritunjay-shall-peelam
 youtube_id: @msptutorial7884
+custom_social:
+  orcid:
+    logo: "orcid.svg"            # ← just the filename, NOT a full URL
+    url: "https://orcid.org/0000-0002-1234-5678"

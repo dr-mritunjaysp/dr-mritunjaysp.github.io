@@ -669,3 +669,13 @@ jsonresume:
   - languages
   - interests
   - references
+
+
+
+  # _config.yml
+
+custom_social:
+  - platform: orcid
+    user: "0000-0002-1234-5678"
+    url: "https://orcid.org/0000-0002-1234-5678"
+    icon: "ai ai-orcid"          # uses academicons
