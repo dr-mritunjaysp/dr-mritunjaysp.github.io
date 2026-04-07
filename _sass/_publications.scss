@@ -44,26 +44,24 @@
       }
 
       .periodical {
-        table,
-        tbody,
-        tr {
-          display: inline;
-        }
+        margin-bottom: 0.35rem;
+      }
 
-        td {
-          display: inline-block !important;
-          color: #ffffff !important;
-          background: linear-gradient(90deg, #00c6ff, #0072ff, #00f2c3, #00c6ff) !important;
-          background-size: 300% 300% !important;
-          padding: 0.25rem 0.75rem !important;
-          margin-right: 0.5rem !important;
-          margin-top: 0.35rem !important;
-          margin-bottom: 0.35rem !important;
-          border-radius: 999px !important;
-          border-top: 0 !important;
-          vertical-align: middle !important;
-          font-weight: 600 !important;
-          animation: social-gradient 3s linear infinite !important;
+      .periodical-badges {
+        margin-bottom: 0.35rem;
+
+        span {
+          display: inline-block;
+          color: #ffffff;
+          background: linear-gradient(90deg, #00c6ff, #0072ff, #00f2c3, #00c6ff);
+          background-size: 300% 300%;
+          padding: 0.25rem 0.75rem;
+          margin-right: 0.5rem;
+          margin-bottom: 0.35rem;
+          border-radius: 999px;
+          vertical-align: middle;
+          font-weight: 600;
+          animation: social-gradient 3s linear infinite;
         }
       }
 
@@ -106,6 +104,11 @@
         }
 
         > em {
+          border-bottom: 1px solid;
+          font-style: normal;
+        }
+
+        > em.author-highlight {
           color: #39d353;
           border-bottom: 1px solid #39d353;
           font-style: normal;
