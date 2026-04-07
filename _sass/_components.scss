@@ -196,19 +196,37 @@ ul.task-list input[type="checkbox"] {
       }
 
       i::before {
-        color: var(--global-text-color);
-        transition-property: all 0.2s ease-in-out;
+        background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1, #5f27cd, #ff6b6b);
+        background-size: 300% 300%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        animation: social-gradient 1s linear infinite;
+        transition: all 0.2s ease-in-out;
       }
 
       &:hover {
         text-decoration: none;
 
         i::before {
-          color: var(--global-theme-color);
+          animation-play-state: paused;
+          filter: brightness(1.15);
         }
       }
     }
   }
+}
+
+@keyframes social-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
 
   .contact-note {
     font-size: 0.8rem;
