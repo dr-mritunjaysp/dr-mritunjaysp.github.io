@@ -43,6 +43,30 @@
         display: inline-block;
       }
 
+      .periodical {
+        table,
+        tbody,
+        tr {
+          display: inline;
+        }
+
+        td {
+          display: inline-block !important;
+          color: #ffffff !important;
+          background: linear-gradient(90deg, #00c6ff, #0072ff, #00f2c3, #00c6ff) !important;
+          background-size: 300% 300% !important;
+          padding: 0.25rem 0.75rem !important;
+          margin-right: 0.5rem !important;
+          margin-top: 0.35rem !important;
+          margin-bottom: 0.35rem !important;
+          border-radius: 999px !important;
+          border-top: 0 !important;
+          vertical-align: middle !important;
+          font-weight: 600 !important;
+          animation: social-gradient 3s linear infinite !important;
+        }
+      }
+
       .abbr {
         margin-bottom: 0.5rem;
 
