@@ -84,8 +84,13 @@
           {%- endif %}
           {%- if forloop.last and author_array_limit == author_array_size %}and {% endif -%}
         {% endif %}
-        {%- if author_is_self -%}
-          <em>
+        {%- assign author_full_name = author.first | append: ' ' | append: author.last -%}
+        {%- assign is_mritunjay_author = false -%}
+        {%- if author_full_name == 'Mritunjay Shall Peelam' -%}
+          {%- assign is_mritunjay_author = true -%}
+        {%- endif -%}
+        {%- if author_is_self or is_mritunjay_author -%}
+          <em class="{% if is_mritunjay_author %}author-highlight{% endif %}">
             {{- author.first }}
             {{ author_last_html -}}
           </em>
