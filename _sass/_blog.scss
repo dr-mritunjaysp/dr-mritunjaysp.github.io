@@ -187,6 +187,29 @@
 }
 
 
+
+.post h2 a {
+  background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1, #5f27cd, #ff6b6b);
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent;
+  animation: social-gradient 3s linear infinite;
+}
+
+.post h2 a:hover {
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #ff9a9e);
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent;
+  animation: social-gradient 1.5s linear infinite;
+  text-decoration: none;
+}
+
+
 @keyframes social-gradient {
   0% {
     background-position: 0% 50%;
