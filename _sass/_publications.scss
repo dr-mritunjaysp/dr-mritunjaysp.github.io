@@ -242,12 +242,7 @@
   font-style: normal;
   font-weight: 700;
   animation: first-author-blink 6s ease-in-out infinite;
-  text-shadow:
-    0 0 4px rgba(57, 211, 83, 0.5),
-    0 0 8px rgba(57, 211, 83, 0.35),
-    0 0 14px rgba(57, 211, 83, 0.2);
 }
-
 
 @keyframes first-author-blink {
   0% {
