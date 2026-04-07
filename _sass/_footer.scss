@@ -7,17 +7,31 @@ footer.fixed-bottom {
   font-size: 0.75rem;
 
   .container {
-    color: var(--global-footer-text-color);
+    background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1, #ff9ff3, #ff6b6b);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
     padding-top: 9px;
     padding-bottom: 8px;
     text-align: center;
+    font-weight: 700;
+    animation: footer-blink-gradient 6s ease-in-out infinite;
   }
 
   a {
-    color: var(--global-footer-link-color);
+    background: linear-gradient(90deg, #00c6ff, #00f2c3, #ff9ff3, #00c6ff);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    animation: footer-blink-gradient 4s ease-in-out infinite;
 
     &:hover {
-      color: var(--global-theme-color);
+      filter: brightness(1.2);
       text-decoration: none;
     }
   }
@@ -31,5 +45,23 @@ footer.sticky-bottom {
 
   .container {
     text-align: center;
+    font-weight: 700;
+  }
+}
+
+@keyframes footer-blink-gradient {
+  0% {
+    background-position: 0% 50%;
+    opacity: 1;
+  }
+
+  50% {
+    background-position: 100% 50%;
+    opacity: 0.35;
+  }
+
+  100% {
+    background-position: 0% 50%;
+    opacity: 1;
   }
 }
