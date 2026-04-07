@@ -69,7 +69,14 @@
     animation: social-gradient 3s linear infinite;
 
     &:hover {
-      filter: brightness(1.2);
+      background: linear-gradient(90deg, #ff6b6b, #feca57, #ff9ff3, #ff6b6b);
+      background-size: 300% 300%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      animation: social-gradient 1.5s linear infinite;
+      filter: brightness(1.15);
     }
   }
 
@@ -84,9 +91,18 @@
     font-weight: bolder;
 
     &:hover {
-      filter: brightness(1.25);
+      background: linear-gradient(90deg, #f7971e, #ffd200, #ff6a00, #f7971e);
+      background-size: 300% 300%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      animation: social-gradient 1.5s linear infinite;
+      filter: brightness(1.2);
     }
   }
+}
+
 
   .navbar-brand.social {
     padding-bottom: 0;
