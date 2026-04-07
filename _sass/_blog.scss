@@ -34,10 +34,30 @@
 }
 
 .post-title {
+  background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1, #5f27cd, #ff6b6b);
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: social-gradient 1s linear infinite;
+
+  span,
+  .font-weight-bold {
+    background: inherit;
+    background-size: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: inherit;
+  }
+
   mjx-container[jax="CHTML"][display="true"] {
     display: unset;
   }
 }
+
 
 .post-list {
   margin: 0;
@@ -163,5 +183,16 @@
       color: var(--global-theme-color);
       text-decoration: none;
     }
+  }
+}
+
+
+@keyframes social-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
   }
 }
