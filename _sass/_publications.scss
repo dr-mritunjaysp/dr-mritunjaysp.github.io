@@ -127,13 +127,20 @@
 
         span {
           display: inline-block;
-          color: v.$black-color;
-          height: 100%;
-          padding-right: 0.5rem;
+          color: #ffffff;
+          background: linear-gradient(90deg, #00c6ff, #0072ff, #00f2c3, #00c6ff);
+          background-size: 300% 300%;
+          padding: 0.25rem 0.75rem;
+          margin-right: 0.5rem;
+          margin-bottom: 0.35rem;
+          border-radius: 999px;
           vertical-align: middle;
+          font-weight: 600;
+          animation: social-gradient 3s linear infinite;
 
           &:hover {
-            text-decoration: underline;
+            text-decoration: none;
+            filter: brightness(1.15);
           }
         }
       }
@@ -205,5 +212,15 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes social-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
   }
 }
