@@ -125,6 +125,13 @@
       .badges {
         padding-bottom: 0.5rem;
 
+        table,
+        tbody,
+        tr {
+          display: block;
+        }
+
+        td,
         span {
           display: inline-block;
           color: #ffffff;
