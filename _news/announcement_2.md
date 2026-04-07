@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Ph.D. Thesis Defense Announcement
+title: Ph.D. Defense
 date: 2025-07-17 09:15:00-0400
 inline: false
 related_posts: false
 ---
 
-I successfully defended my Ph.D. thesis at BITS Pilani. The details of the defense are as follows:
+I defended my Ph.D. thesis successfully at BITS Pilani. The details are as follows:
 
 ---
 
@@ -18,29 +18,25 @@ I successfully defended my Ph.D. thesis at BITS Pilani. The details of the defen
 
 ---
 
-### 📘 Thesis Details
+### 📘 Thesis Title
 
-- **Title:**  
-  *Design and Development of Blockchain-Based Schemes for Enabling Intelligent Transportation Systems*
-
----
-
-### 👨‍🏫 Committee
-
-- **Supervisor:**  
-  Prof. Vinay Chamola, BITS Pilani (Pilani Campus)
-
-- **External Examiner:**  
-  Prof. Gwanggil Jeon, Incheon National University, South Korea
+**Design and Development of Blockchain-Based Schemes for Enabling Intelligent Transportation Systems**
 
 ---
 
-### 🎓 Summary
+### 👨‍🏫 Supervision & Examination
 
-The research focuses on developing advanced blockchain-based frameworks to enhance security, transparency, and efficiency in Intelligent Transportation Systems (ITS). It integrates emerging technologies such as IoT, Edge AI, and Machine Learning to address real-world challenges in vehicular networks.
+- **Supervisor:** Prof. Vinay Chamola, BITS Pilani, Pilani Campus  
+- **External Examiner:** Prof. Gwanggil Jeon, Incheon National University, South Korea  
 
 ---
 
-### 🙏 Acknowledgment
+### 📌 Overview
 
-I sincerely thank my supervisor, faculty members, and peers for their continuous support and guidance throughout this journey.
+The proposed research focuses on the design and development of blockchain-based frameworks for Intelligent Transportation Systems (ITS). It integrates emerging technologies such as IoT, Edge AI, and Machine Learning to enhance security, transparency, and efficiency in next-generation vehicular networks.
+
+---
+
+### 🎓 Note
+
+This milestone marks the successful completion of my doctoral research journey and reflects my continued interest in advancing research in Blockchain, IoT, and Intelligent Systems.
