@@ -82,11 +82,8 @@
         }
 
         > em {
-          color: #39d353;
-          border-bottom: 1px solid #39d353;
+          border-bottom: 1px solid;
           font-style: normal;
-          font-weight: 700;
-          animation: first-author-blink 6s ease-in-out infinite;
         }
 
         > span.more-authors {
@@ -116,7 +113,6 @@
             border-color: var(--global-theme-color);
           }
         }
-
         a.award.btn {
           border-color: var(--global-highlight-color);
         }
@@ -124,7 +120,6 @@
 
       .badges {
         padding-bottom: 0.5rem;
-
         span {
           display: inline-block;
           color: v.$black-color;
@@ -178,11 +173,9 @@
         border-color: var(--global-text-color);
       }
     }
-
     div.award.hidden {
       border: dashed 1px var(--global-bg-color);
     }
-
     div.award.hidden.open {
       border-color: var(--global-highlight-color);
     }
@@ -192,18 +185,4 @@
 .citation,
 .citation-number {
   color: var(--global-theme-color);
-}
-
-@keyframes first-author-blink {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.35;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }
