@@ -85,12 +85,15 @@
         {% endif %}
 
         {%- assign author_full_name = author.first | append: ' ' | append: author.last -%}
+        {%- assign author_full_name_down = author_full_name | downcase -%}
         {%- assign author_first_down = author.first | downcase -%}
         {%- assign author_last_down = author_last_name | downcase -%}
         {%- assign is_mritunjay_author = false -%}
 
-        {%- if author_full_name == 'Mritunjay Shall Peelam' -%}
-          {%- assign is_mritunjay_author = true -%}
+        {%- if author_full_name_down contains 'mritunjay' -%}
+          {%- if author_full_name_down contains 'peelam' -%}
+            {%- assign is_mritunjay_author = true -%}
+          {%- endif -%}
         {%- endif -%}
 
         {%- if author_first_down contains 'mritunjay' -%}
