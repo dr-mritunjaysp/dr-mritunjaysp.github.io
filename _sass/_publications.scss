@@ -235,6 +235,32 @@
   color: var(--global-theme-color);
 }
 
+
+.author {
+  a {
+    border-bottom: 1px dashed var(--global-theme-color);
+
+    &:hover {
+      border-bottom-style: solid;
+      text-decoration: none;
+    }
+  }
+
+  > em {
+    border-bottom: 1px solid;
+    font-style: normal;
+  }
+
+  > em.author-highlight {
+    color: #39d353;
+    border-bottom: 1px solid #39d353;
+    font-style: normal;
+    font-weight: 700;
+    animation: first-author-blink 6s ease-in-out infinite;
+  }
+}
+
+
 @keyframes first-author-blink {
   0% {
     opacity: 1;
