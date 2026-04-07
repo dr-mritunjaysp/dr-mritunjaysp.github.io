@@ -45,15 +45,11 @@
     </div>
   {% endif %}
 
-  <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
-    <!-- Title -->
     <div class="title">{{ entry.title }}</div>
 
-    <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
-
       {% assign author_array_limit = author_array_size %}
       {% if site.max_author_limit and author_array_size > site.max_author_limit %}
         {% assign author_array_limit = site.max_author_limit %}
@@ -63,11 +59,13 @@
         {% assign author_is_self = false %}
         {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
         {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
+
         {% if site.scholar.last_name contains author_last_name %}
           {% if site.scholar.first_name contains author.first %}
             {% assign author_is_self = true %}
           {% endif %}
         {%- endif -%}
+
         {% assign coauthor_url = null %}
         {%- assign clean_last_name = author_last_name | downcase | remove_accents -%}
         {% if site.data.coauthors[clean_last_name] %}
@@ -87,9 +85,18 @@
         {% endif %}
 
         {%- assign author_full_name = author.first | append: ' ' | append: author.last -%}
+        {%- assign author_first_down = author.first | downcase -%}
+        {%- assign author_last_down = author_last_name | downcase -%}
         {%- assign is_mritunjay_author = false -%}
-        {%- if author_full_name == 'Mritunjay Shall Peelam' or author.first contains 'Mritunjay' and author_last_name contains 'Peelam' -%}
+
+        {%- if author_full_name == 'Mritunjay Shall Peelam' -%}
           {%- assign is_mritunjay_author = true -%}
+        {%- endif -%}
+
+        {%- if author_first_down contains 'mritunjay' -%}
+          {%- if author_last_down contains 'peelam' -%}
+            {%- assign is_mritunjay_author = true -%}
+          {%- endif -%}
         {%- endif -%}
 
         {%- if is_mritunjay_author -%}
@@ -163,7 +170,6 @@
       {% endif %}
     </div>
 
-    <!-- Journal/Book title and date -->
     {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
     {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
 
@@ -223,7 +229,6 @@
       {{ entry.note | strip }}
     </div>
 
-    <!-- Links/Buttons -->
     <div class="links">
       {% if entry.award %}
         <a class="award btn btn-sm z-depth-0" role="button">
@@ -339,6 +344,7 @@
               {% endif %}
             ></span>
           {% endif %}
+
           {% if site.enable_publication_badges.dimensions and entry_has_dimensions_badge %}
             <span
               class="__dimensions_badge_embed__"
@@ -354,6 +360,7 @@
               style="margin-bottom: 3px;"
             ></span>
           {% endif %}
+
           {% if site.enable_publication_badges.google_scholar and entry_has_google_scholar_badge %}
             <a
               href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user={{ site.data.socials.scholar_userid }}&citation_for_view={{ site.data.socials.scholar_userid }}:{{ entry.google_scholar_id }}"
@@ -384,6 +391,7 @@
               >
             </a>
           {% endif %}
+
           {% if site.enable_publication_badges.inspirehep and entry_has_inspirehep_badge %}
             <a
               href="https://inspirehep.net/literature/{{ entry.inspirehep_id }}"
