@@ -7,7 +7,7 @@ footer.fixed-bottom {
   font-size: 0.75rem;
 
   .container {
-    background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1, #ff9ff3, #ff6b6b);
+    background: linear-gradient(90deg, #0057ff, #00a86b, #ff6b00, #c2185b, #0057ff);
     background-size: 300% 300%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -21,7 +21,7 @@ footer.fixed-bottom {
   }
 
   a {
-    background: linear-gradient(90deg, #00c6ff, #00f2c3, #ff9ff3, #00c6ff);
+    background: linear-gradient(90deg, #0057ff, #00a86b, #ff6b00, #c2185b, #0057ff);
     background-size: 300% 300%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -31,7 +31,7 @@ footer.fixed-bottom {
     animation: footer-blink-gradient 4s ease-in-out infinite;
 
     &:hover {
-      filter: brightness(1.2);
+      filter: brightness(1.15);
       text-decoration: none;
     }
   }
@@ -57,7 +57,7 @@ footer.sticky-bottom {
 
   50% {
     background-position: 100% 50%;
-    opacity: 0.35;
+    opacity: 0.45;
   }
 
   100% {
