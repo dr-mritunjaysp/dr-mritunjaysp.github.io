@@ -171,14 +171,14 @@
           color: var(--global-text-color);
           background:
             linear-gradient(var(--global-card-bg-color), var(--global-card-bg-color)) padding-box,
-            linear-gradient(90deg, #7c3aed, #06b6d4, #10b981, #f59e0b, #ef4444, #7c3aed) border-box;
+            linear-gradient(90deg, #ff7a18, #ff3d81, #7c4dff, #00c2ff, #2dd4bf, #ff7a18) border-box;
           background-size: auto, 300% 300%;
           border: 1px solid transparent;
           border-radius: 999px;
           padding-left: 1rem;
           padding-right: 1rem;
-          padding-top: 0.25rem;
-          padding-bottom: 0.25rem;
+          padding-top: 0.45rem;
+          padding-bottom: 0.45rem;
           margin-left: 0;
           animation: social-gradient 3s linear infinite;
 
@@ -191,7 +191,7 @@
         a.award.btn {
           background:
             linear-gradient(var(--global-card-bg-color), var(--global-card-bg-color)) padding-box,
-            linear-gradient(90deg, #7c3aed, #06b6d4, #10b981, #f59e0b, #ef4444, #7c3aed) border-box;
+            linear-gradient(90deg, #ff7a18, #ff3d81, #7c4dff, #00c2ff, #2dd4bf, #ff7a18) border-box;
         }
       }
 
