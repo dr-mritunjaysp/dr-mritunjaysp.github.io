@@ -1,0 +1,8 @@
+{% if site.visitor_counter and site.visitor_counter.enabled %}
+  <div class="visitor-counter">
+    <span class="visitor-counter-text">
+      {{ site.visitor_counter.label | default: 'Number of Visitors' }} :
+      <span id="visitor-counter-value" class="visitor-counter-value">0</span>
+    </span>
+  </div>
+{% endif %}

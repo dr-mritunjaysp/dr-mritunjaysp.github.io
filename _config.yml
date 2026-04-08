@@ -401,6 +401,18 @@ enable_openpanel_analytics: false # enables Openpanel analytics (https://openpan
 enable_google_verification: false # enables google site verification
 enable_bing_verification: false # enables bing site verification
 enable_cookie_consent: false # enables GDPR-compliant cookie consent dialog (https://github.com/orestbida/cookieconsent)
+
+visitor_counter:
+  enabled: true # displays a visible visitor counter below the social icons on the about page
+  scope: site # use "site" for one total counter, or "page" for per-page counts
+  label: "Number of Visitors" # change to "Page views" or any label you prefer
+  firebase:
+    api_key: "AIzaSyDaV2ARQU9EwLKo3mN02VoIiwm4w7jksOo"
+    auth_domain: "portfolio-6a1b9.firebaseapp.com"
+    database_url: "https://portfolio-6a1b9-default-rtdb.firebaseio.com"
+    project_id: "portfolio-6a1b9"
+    app_id: "1:604162259556:web:9388758fb2a3c61d977d71"
+  page_id: # optional explicit counter ID; leave blank to derive it from site.url
 enable_masonry: true # enables automatic project cards arrangement
 enable_math: true # enables math typesetting (uses MathJax)
 enable_tooltips: false # enables automatic tooltip links generated for each section titles on pages and posts

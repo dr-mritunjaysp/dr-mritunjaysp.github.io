@@ -2,43 +2,38 @@
 layout: default
 ---
 <div class="post">
-  <header class="post-header">
-<h1 class="post-title">
-  {% if site.title == 'blank' %}
-    <span class="font-weight-bold">{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}</span>
-  {% else %}
-    {{ site.title }}
-  {% endif %}
-</h1>
-
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
-
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
+  <header class="post-header about-header">
+    {% if page.profile and page.profile.image %}
+      {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+      <div class="about-header-photo-ring">
+        <div class="about-header-photo-shell">
+          <img
+            src="{{ profile_image_path | relative_url | bust_file_cache }}"
+            class="about-header-photo{% if page.profile.image_circular %} rounded-circle{% else %} rounded{% endif %}"
+            alt="{{ page.profile.image }}"
+            loading="eager"
+          >
+        </div>
       </div>
     {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+    <div class="about-header-text">
+      <h1 class="post-title">
+        {% if site.title == 'blank' %}
+          <span class="font-weight-bold">{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}</span>
+        {% else %}
+          {{ site.title }}
+        {% endif %}
+      </h1>
+
+      <p class="desc">{{ page.subtitle }}</p>
+    </div>
+  </header>
+
+  <article>
+    <div class="about-layout">
+      <div class="about-content clearfix">{{ content }}</div>
+    </div>
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
@@ -68,6 +63,7 @@ layout: default
     {% if page.social %}
       <div class="social">
         <div class="contact-icons">{% social_links %}</div>
+        {% include visitor-counter.liquid %}
 
         <div class="contact-note">{{ site.contact_note }}</div>
       </div>

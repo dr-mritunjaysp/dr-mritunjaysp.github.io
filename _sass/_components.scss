@@ -55,38 +55,98 @@ ul.task-list input[type="checkbox"] {
 
 // Profile
 
-.profile {
-  width: 100%;
-
-  .more-info {
-    margin-bottom: 5px;
-    margin-top: 5px;
-    font-family: monospace;
+.about-layout {
+  .about-content {
+    text-align: left;
 
     p {
-      display: inline-block;
-      margin: 0;
+      hyphens: auto;
+      text-align: justify;
+      text-justify: inter-word;
     }
   }
 }
 
-.profile.float-right {
-  margin-left: 1rem;
-}
+.about-header {
+  --about-photo-size: 170px;
 
-.profile.float-left {
-  margin-right: 1rem;
-}
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  text-align: center;
 
-@media (min-width: 576px) {
-  .profile {
-    width: 15%;
+  .about-header-photo-ring {
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    display: inline-flex;
+    height: calc(var(--about-photo-size) + 16px);
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: calc(var(--about-photo-size) + 16px);
 
-    .address {
-      p {
-        display: block;
-      }
+    &::before {
+      animation: profile-gradient-spin 4s linear infinite;
+      background: conic-gradient(from 0deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1, #5f27cd, #ff6b6b);
+      border-radius: 50%;
+      content: '';
+      inset: 0;
+      position: absolute;
+      z-index: 0;
     }
+
+    &::after {
+      background: var(--global-bg-color);
+      border-radius: 50%;
+      content: '';
+      inset: 4px;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+
+  .about-header-photo-shell {
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    display: flex;
+    height: calc(var(--about-photo-size) - 4px);
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: calc(var(--about-photo-size) - 4px);
+    z-index: 2;
+  }
+
+  .about-header-photo {
+    aspect-ratio: 1 / 1;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .about-header-text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .about-header {
+    --about-photo-size: 140px;
+  }
+}
+
+@keyframes profile-gradient-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
 
@@ -222,6 +282,42 @@ ul.task-list input[type="checkbox"] {
 
   .contact-note {
     font-size: 0.8rem;
+  }
+
+  .visitor-counter {
+    margin-top: 0.75rem;
+
+    .visitor-counter-text {
+      background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1, #5f27cd, #ff6b6b);
+      background-size: 300% 300%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      font-size: 0.95rem;
+      font-weight: 500;
+      animation: social-gradient 1.5s linear infinite;
+    }
+
+    .visitor-counter-value {
+      background: inherit;
+      background-size: inherit;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      animation: inherit;
+      display: inline-block;
+      font-variant-numeric: tabular-nums;
+      min-width: 2ch;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+
+      &.is-animating {
+        opacity: 0.85;
+        transform: translateY(-4px);
+      }
+    }
   }
 }
 
