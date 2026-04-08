@@ -168,6 +168,10 @@
 
       .links {
         a.btn {
+          --bs-btn-color: var(--global-text-color);
+          --bs-btn-hover-color: var(--global-text-color);
+          --bs-btn-active-color: var(--global-text-color);
+          --bs-btn-disabled-color: var(--global-text-color);
           color: var(--global-text-color) !important;
           background:
             linear-gradient(var(--global-card-bg-color), var(--global-card-bg-color)) padding-box,
@@ -185,6 +189,12 @@
           &:hover {
             color: var(--global-text-color) !important;
             filter: brightness(1.1);
+          }
+
+          &:visited,
+          &:focus,
+          &:active {
+            color: var(--global-text-color) !important;
           }
         }
 
