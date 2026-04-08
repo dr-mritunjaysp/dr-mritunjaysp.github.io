@@ -168,7 +168,7 @@
 
       .links {
         a.btn {
-          color: var(--global-text-color);
+          color: var(--global-text-color) !important;
           background:
             linear-gradient(var(--global-card-bg-color), var(--global-card-bg-color)) padding-box,
             linear-gradient(90deg, #ff7a18, #ff3d81, #7c4dff, #00c2ff, #2dd4bf, #ff7a18) border-box;
@@ -183,7 +183,7 @@
           animation: social-gradient 3s linear infinite;
 
           &:hover {
-            color: var(--global-theme-color);
+            color: var(--global-text-color) !important;
             filter: brightness(1.1);
           }
         }
