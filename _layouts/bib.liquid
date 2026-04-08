@@ -217,7 +217,54 @@
       {{ periodical | strip }}
     </div>
 
-    {% if info_items.size > 0 %}
+    {% assign citation_count = nil %}
+    {% assign scholar_profile_id = site.data.socials.scholar_userid | default: site.scholar_userid | strip %}
+    {% assign scholar_profile_url = nil %}
+    {% if scholar_profile_id != blank %}
+      {% assign scholar_profile_url = 'https://scholar.google.com/citations?user=' | append: scholar_profile_id | append: '&hl=en' %}
+    {% endif %}
+
+    {% assign scholar_citation_url = scholar_profile_url %}
+    {% assign entry_title_slug = entry.title | slugify %}
+
+    {% if site.data.citations and site.data.citations.papers %}
+      {% assign scholar_id_key = nil %}
+      {% if scholar_profile_id != blank and entry.google_scholar_id %}
+        {% assign scholar_id_key = scholar_profile_id | append: ':' | append: entry.google_scholar_id %}
+      {% endif %}
+
+      {% if scholar_id_key and site.data.citations.papers[scholar_id_key] %}
+        {% assign citation_count = site.data.citations.papers[scholar_id_key].citations %}
+      {% elsif entry.google_scholar_id and site.data.citations.papers[entry.google_scholar_id] %}
+        {% assign citation_count = site.data.citations.papers[entry.google_scholar_id].citations %}
+      {% else %}
+        {% for paper in site.data.citations.papers %}
+          {% assign paper_key = paper[0] %}
+          {% assign paper_data = paper[1] %}
+          {% assign paper_title_slug = paper_data.title | slugify %}
+
+          {% if paper_title_slug == entry_title_slug %}
+            {% assign citation_count = paper_data.citations %}
+            {% if scholar_profile_id != blank and paper_key contains ':' %}
+              {% assign matched_scholar_id = paper_key | split: ':' | last %}
+              {% assign scholar_citation_url = 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=' | append: scholar_profile_id | append: '&citation_for_view=' | append: scholar_profile_id | append: ':' | append: matched_scholar_id %}
+            {% endif %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endif %}
+
+    {% if entry.google_scholar_id and scholar_profile_id != blank %}
+      {% assign scholar_citation_url = 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=' | append: scholar_profile_id | append: '&citation_for_view=' | append: scholar_profile_id | append: ':' | append: entry.google_scholar_id %}
+    {% endif %}
+
+    {% assign has_periodical_badges = false %}
+    {% if info_items.size > 0 or citation_count != nil %}
+      {% assign has_periodical_badges = true %}
+    {% endif %}
+
+    {% if has_periodical_badges %}
       <div class="periodical-badges">
         {% for info in info_items %}
           {% assign info_text = info | strip %}
@@ -225,6 +272,16 @@
             <span>{{ info_text }}</span>
           {% endif %}
         {% endfor %}
+
+        {% if citation_count != nil %}
+          {% if scholar_citation_url %}
+            <a href="{{ scholar_citation_url }}" class="citation-pill" aria-label="Google Scholar citation count for {{ entry.title }}">
+              Citations: {{ citation_count }}
+            </a>
+          {% else %}
+            <span class="citation-pill">Citations: {{ citation_count }}</span>
+          {% endif %}
+        {% endif %}
       </div>
     {% endif %}
 
@@ -370,27 +427,27 @@
               aria-label="Google Scholar link"
               role="button"
             >
-              {% assign citation_count = 0 %}
-              {% assign scholar_id_key = site.scholar_userid | append: ':' | append: entry.google_scholar_id %}
+              {% assign scholar_badge_count = 0 %}
+              {% assign scholar_id_key = site.data.socials.scholar_userid | append: ':' | append: entry.google_scholar_id %}
               {% assign publication_key = entry.google_scholar_id %}
 
               {% if site.data.citations.papers[scholar_id_key] %}
-                {% assign citation_count = site.data.citations.papers[scholar_id_key].citations %}
+                {% assign scholar_badge_count = site.data.citations.papers[scholar_id_key].citations %}
               {% elsif site.data.citations.papers[publication_key] %}
-                {% assign citation_count = site.data.citations.papers[publication_key].citations %}
+                {% assign scholar_badge_count = site.data.citations.papers[publication_key].citations %}
               {% else %}
                 {% for paper in site.data.citations.papers %}
                   {% assign paper_key = paper[0] %}
                   {% if paper_key contains entry.google_scholar_id %}
-                    {% assign citation_count = paper[1].citations %}
+                    {% assign scholar_badge_count = paper[1].citations %}
                     {% break %}
                   {% endif %}
                 {% endfor %}
               {% endif %}
 
               <img
-                src="https://img.shields.io/badge/scholar-{{ citation_count }}-4285F4?logo=googlescholar&labelColor=beige"
-                alt="{{ citation_count }} Google Scholar citations"
+                src="https://img.shields.io/badge/scholar-{{ scholar_badge_count }}-4285F4?logo=googlescholar&labelColor=beige"
+                alt="{{ scholar_badge_count }} Google Scholar citations"
               >
             </a>
           {% endif %}

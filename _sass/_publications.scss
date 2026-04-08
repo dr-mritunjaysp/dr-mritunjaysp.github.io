@@ -50,7 +50,8 @@
       .periodical-badges {
         margin-bottom: 0.35rem;
 
-        span {
+        span,
+        a.citation-pill {
           display: inline-block;
           color: #ffffff;
           background: linear-gradient(90deg, #00c6ff, #0072ff, #00f2c3, #00c6ff);
@@ -62,6 +63,11 @@
           vertical-align: middle;
           font-weight: 600;
           animation: social-gradient 3s linear infinite;
+
+          &:hover {
+            text-decoration: none;
+            filter: brightness(1.15);
+          }
         }
       }
 

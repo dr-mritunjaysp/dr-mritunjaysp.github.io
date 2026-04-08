@@ -5,7 +5,7 @@ cv_pdf: /assets/pdf/Dr-Mritunjay_resume.pdf # path to your CV PDF file
 email: mritunjay.peelam@ddn.upes.ac.in # your email address
 # inspirehep_id: 8745080986 # Inspire HEP author ID
 # rss_icon: true # comment this line to hide the RSS icon
-scholar_userid: MdGRPEIAAAAJ&hl # your Google Scholar ID
+scholar_userid: MdGRPEIAAAAJ # your Google Scholar ID
 orcid_id: 0000-0002-8022-3815
 # wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 whatsapp_number: 8745080986 # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
