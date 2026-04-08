@@ -46,8 +46,11 @@
       &::before {
         align-items: center;
         animation: social-gradient 3s linear infinite;
-        background: linear-gradient(135deg, #00d5ff, #22c55e, #ff5a5f, #facc15, #00d5ff);
-        background-size: 250% 250%;
+        background:
+          linear-gradient(var(--global-card-bg-color), var(--global-card-bg-color)) padding-box,
+          linear-gradient(135deg, #00d5ff, #22c55e, #ff5a5f, #facc15, #00d5ff) border-box;
+        background-size: auto, 250% 250%;
+        border: 2px solid transparent;
         border-radius: 50%;
         color: #ffffff;
         content: counter(publication-counter);
@@ -78,8 +81,11 @@
         a.citation-pill {
           display: inline-block;
           color: #ffffff;
-          background: linear-gradient(90deg, #00d5ff, #22c55e, #ff5a5f, #facc15, #00d5ff);
-          background-size: 300% 300%;
+          background:
+            linear-gradient(var(--global-card-bg-color), var(--global-card-bg-color)) padding-box,
+            linear-gradient(90deg, #00d5ff, #22c55e, #ff5a5f, #facc15, #00d5ff) border-box;
+          background-size: auto, 300% 300%;
+          border: 2px solid transparent;
           padding: 0.25rem 0.75rem;
           margin-right: 0.5rem;
           margin-bottom: 0.35rem;
