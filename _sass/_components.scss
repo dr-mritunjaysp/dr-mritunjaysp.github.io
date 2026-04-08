@@ -366,6 +366,18 @@ ul.task-list input[type="checkbox"] {
         transform: translateY(-4px);
       }
     }
+
+    .visitor-counter-separator,
+    .visitor-counter-metric,
+    .visitor-counter-metric-value {
+      background: inherit;
+      background-size: inherit;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      animation: inherit;
+    }
   }
 }
 

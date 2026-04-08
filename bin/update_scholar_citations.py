@@ -60,7 +60,11 @@ def get_scholar_citations() -> None:
                 and "last_updated" in existing_data["metadata"]
             ):
                 safe_print(f"Last updated on: {existing_data['metadata']['last_updated']}")
-                if existing_data["metadata"]["last_updated"] == today:
+                author_metrics = existing_data["metadata"].get("author_metrics", {})
+                metrics_present = all(
+                    key in author_metrics for key in ["total_citations", "h_index", "i10_index"]
+                )
+                if existing_data["metadata"]["last_updated"] == today and metrics_present:
                     safe_print("Citations data is already up-to-date. Skipping fetch.")
                     return
         except Exception as e:
@@ -91,6 +95,13 @@ def get_scholar_citations() -> None:
         print(f"No publications found in author data for user ID '{SCHOLAR_USER_ID}'.")
         sys.exit(1)
 
+    citation_data["metadata"]["author_name"] = author_data.get("name", "")
+    citation_data["metadata"]["author_metrics"] = {
+        "total_citations": author_data.get("citedby", 0),
+        "h_index": author_data.get("hindex", 0),
+        "i10_index": author_data.get("i10index", 0),
+    }
+
     for pub in author_data["publications"]:
         try:
             pub_id = pub.get("pub_id") or pub.get("author_pub_id")
@@ -117,7 +128,7 @@ def get_scholar_citations() -> None:
             )
 
     # Compare new data with existing data
-    if existing_data and existing_data.get("papers") == citation_data["papers"]:
+    if existing_data and existing_data == citation_data:
         safe_print("No changes in citation data. Skipping file update.")
         return
 
