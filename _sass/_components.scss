@@ -142,14 +142,12 @@ ul.task-list input[type="checkbox"] {
   .section-count-badge {
     align-items: center;
     animation: section-count-gradient 4s linear infinite;
-    background:
-      linear-gradient(var(--global-card-bg-color), var(--global-card-bg-color)) padding-box,
-      linear-gradient(135deg, #7c3aed, #06b6d4, #10b981, #f59e0b, #ef4444, #7c3aed) border-box;
-    background-size: auto, 250% 250%;
-    border: 2px solid transparent;
+    background: linear-gradient(135deg, #7c3aed, #06b6d4, #10b981, #f59e0b, #ef4444, #7c3aed);
+    background-size: 250% 250%;
+    border: none;
     border-radius: 50%;
     box-shadow: 0 0 16px rgba(34, 197, 94, 0.12);
-    color: var(--global-text-color);
+    color: #ffffff;
     display: inline-flex;
     font-size: 0.95rem;
     font-weight: 700;
