@@ -5,13 +5,16 @@ layout: default
   <header class="post-header about-header">
     {% if page.profile and page.profile.image %}
       {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-      <div class="about-header-photo-ring">
-        <div class="about-header-photo-shell">
+      <div class="about-header-photo-ring" style="width: 186px; height: 186px; max-width: 186px; max-height: 186px;">
+        <div class="about-header-photo-shell" style="width: 166px; height: 166px; max-width: 166px; max-height: 166px;">
           <img
             src="{{ profile_image_path | relative_url | bust_file_cache }}"
             class="about-header-photo{% if page.profile.image_circular %} rounded-circle{% else %} rounded{% endif %}"
             alt="{{ page.profile.image }}"
             loading="eager"
+            width="166"
+            height="166"
+            style="width: 166px; height: 166px; max-width: 166px; max-height: 166px;"
           >
         </div>
       </div>
