@@ -52,7 +52,7 @@
         background-size: auto, 250% 250%;
         border: 2px solid transparent;
         border-radius: 50%;
-        color: #ffffff;
+        color: var(--global-text-color);
         content: counter(publication-counter);
         display: inline-flex;
         font-size: 0.82rem;
@@ -80,7 +80,7 @@
         span,
         a.citation-pill {
           display: inline-block;
-          color: #ffffff;
+          color: var(--global-text-color) !important;
           background:
             linear-gradient(var(--global-card-bg-color), var(--global-card-bg-color)) padding-box,
             linear-gradient(90deg, #7c3aed, #06b6d4, #10b981, #f59e0b, #ef4444, #7c3aed) border-box;
@@ -99,6 +99,7 @@
           &:hover {
             text-decoration: none;
             filter: brightness(1.15);
+            color: var(--global-text-color) !important;
           }
         }
       }

@@ -149,7 +149,7 @@ ul.task-list input[type="checkbox"] {
     border: 2px solid transparent;
     border-radius: 50%;
     box-shadow: 0 0 16px rgba(34, 197, 94, 0.12);
-    color: #ffffff;
+    color: var(--global-text-color);
     display: inline-flex;
     font-size: 0.95rem;
     font-weight: 700;
