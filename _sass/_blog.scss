@@ -142,6 +142,19 @@
       }
     }
   }
+
+  article,
+  .post-content,
+  #markdown-content {
+    text-align: left;
+
+    p,
+    li {
+      hyphens: auto;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+  }
 }
 
 .featured-posts {
