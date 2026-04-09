@@ -88,6 +88,20 @@ div.container-links {
 }
 
 .cv {
+  .card {
+    position: relative;
+    border: 1px solid transparent !important;
+    border-radius: 1.1rem !important;
+    background:
+      linear-gradient(var(--global-card-bg-color), var(--global-card-bg-color)) padding-box,
+      linear-gradient(90deg, #06d6a0, #22d3ee, #f59e0b, #ef4444, #7c3aed) border-box !important;
+    background-size:
+      100% 100%,
+      240% 240% !important;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
+    animation: cv-card-gradient-flow 5.5s linear infinite;
+  }
+
   .date-column {
     flex: 0 0 170px;
     max-width: 170px;
@@ -271,6 +285,20 @@ body:has(.cv-page) {
   50% {
     opacity: 1;
     transform: scaleY(1.06);
+  }
+}
+
+@keyframes cv-card-gradient-flow {
+  0% {
+    background-position:
+      0 0,
+      200% 50%;
+  }
+
+  100% {
+    background-position:
+      0 0,
+      0% 50%;
   }
 }
 
