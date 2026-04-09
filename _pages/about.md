@@ -30,7 +30,7 @@ announcements:
 latest_posts:
   enabled: true
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  limit: 2 # leave blank to include all the blog posts
 ---
 
 <!-- I am currently an Assistant Professor at [UPES Dehradun](https://www.upes.ac.in/). Previously, I worked as an Assistant Professor at PSIT Kanpur and as a Programming Language Trainer at Tejas Engineers Academy, New Delhi. I completed my PhD from [BITS Pilani](https://www.bits-pilani.ac.in/) under Prof. Vinay Chamola. -->
