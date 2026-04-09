@@ -99,7 +99,9 @@ div.container-links {
       100% 100%,
       240% 240% !important;
     box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
-    animation: cv-card-gradient-flow 5.5s linear infinite;
+    animation:
+      cv-card-gradient-flow 5.5s linear infinite,
+      cv-card-color-shift 7s ease-in-out infinite;
   }
 
   .date-column {
@@ -299,6 +301,21 @@ body:has(.cv-page) {
     background-position:
       0 0,
       0% 50%;
+  }
+}
+
+@keyframes cv-card-color-shift {
+  0%,
+  100% {
+    filter: hue-rotate(0deg) saturate(1);
+  }
+
+  33% {
+    filter: hue-rotate(25deg) saturate(1.1);
+  }
+
+  66% {
+    filter: hue-rotate(-20deg) saturate(1.05);
   }
 }
 
