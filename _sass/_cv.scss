@@ -98,10 +98,13 @@ div.container-links {
     background-size:
       100% 100%,
       240% 240% !important;
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
+    box-shadow:
+      0 14px 30px rgba(0, 0, 0, 0.16),
+      0 0 0 rgba(255, 122, 24, 0.1);
     animation:
       cv-card-gradient-flow 5.5s linear infinite,
-      cv-card-color-shift 7s ease-in-out infinite;
+      cv-card-color-shift 7s ease-in-out infinite,
+      cv-card-border-blink 1.6s ease-in-out infinite;
   }
 
   .date-column {
@@ -316,6 +319,25 @@ body:has(.cv-page) {
 
   66% {
     filter: hue-rotate(-20deg) saturate(1.05);
+  }
+}
+
+@keyframes cv-card-border-blink {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow:
+      0 14px 30px rgba(0, 0, 0, 0.16),
+      0 0 10px rgba(34, 211, 238, 0.18),
+      0 0 18px rgba(255, 61, 129, 0.14);
+  }
+
+  50% {
+    opacity: 0.92;
+    box-shadow:
+      0 14px 30px rgba(0, 0, 0, 0.16),
+      0 0 20px rgba(34, 211, 238, 0.3),
+      0 0 36px rgba(255, 122, 24, 0.24);
   }
 }
 
