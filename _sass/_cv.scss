@@ -44,7 +44,12 @@ a.btncv:hover {
 
 p.location {
   font-size: 0.7rem;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-align: left;
+  line-height: 1.35;
+  margin-top: 0.45rem;
 }
 
 i.iconlocation {
@@ -80,6 +85,56 @@ div.container-links {
   justify-content: flex-start;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+}
+
+.cv {
+  .date-column {
+    flex: 0 0 170px;
+    max-width: 170px;
+    text-align: left !important;
+  }
+
+  .date-column .badge {
+    display: inline-block;
+  }
+
+  .card-text,
+  .card-text p,
+  .card-text li,
+  .list-group-item,
+  .list-group-item p,
+  .list-group-item h6 {
+    text-align: left;
+    text-justify: auto;
+    word-spacing: normal;
+    letter-spacing: normal;
+  }
+
+  .items {
+    padding-left: 1.25rem;
+  }
+
+  .cv-reference-item {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .cv-reference-text {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    line-height: 1.65;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cv {
+    .date-column {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 0.75rem;
+    }
+  }
 }
 
 /*****************************

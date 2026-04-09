@@ -4,12 +4,12 @@
 
 <ul class="card-text font-weight-light list-group list-group-flush">
   {% for entry in entries %}
-    <li class="list-group-item">
+    <li class="list-group-item cv-reference-item">
       {% if entry.icon %}
         <i class="{{ entry.icon }}"></i>
       {% endif %}
       <strong>{{ entry.name }}</strong>
-      <p>{{ entry.reference | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+      <p class="cv-reference-text">{{ entry.reference | markdownify | remove: '<p>' | remove: '</p>' }}</p>
     </li>
   {% endfor %}
 </ul>
