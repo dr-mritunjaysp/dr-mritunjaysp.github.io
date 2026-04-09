@@ -1,189 +1,261 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
-  image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
-
+  name: Dr. Mritunjay Shall Peelam
+  label: Assistant Professor (Selection Grade), UPES Dehradun
+  email: mritunjay.iete@gmail.com
+  phone: +91-8745080986
+  website: https://dr-mritunjaysp.github.io/
+  image: /assets/img/prof_pic_color.jpg
+  summary: 'Ph.D. in Electrical and Electronics Engineering from BITS Pilani with research focused on blockchain-based intelligent transportation systems. My work integrates Blockchain, Game Theory, IoT, Edge AI, Federated Learning, and Multimodal Machine Learning to improve the security, transparency, and efficiency of next-generation vehicular and smart systems. I am currently serving as Assistant Professor (Selection Grade) at UPES Dehradun and have published in leading venues including IEEE Internet of Things Journal, IEEE Transactions on Intelligent Transportation Systems, IEEE Transactions on Consumer Electronics, IEEE Access, IEEE Open Journal of the Communications Society, Digital Communications and Networks, and Blockchain: Research and Applications.'
   social_networks:
-    - network: X
-      username: AlbertEinstein
-    - network: GitHub
-      username: example
-    - network: LinkedIn
-      username: example
-
+  - network: Google Scholar
+    username: MdGRPEIAAAAJ
+  - network: LinkedIn
+    username: mritunjay-shall-peelam-37810553
+  - network: GitHub
+    username: shall786
+  - network: ORCID
+    username: 0000-0002-8022-3815
   address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
-
+    city: Mirzapur
+    region: Uttar Pradesh
+    postalCode: '231001'
+    countryCode: IN
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
-        highlights:
-          - Description 1.
-          - Description 2.
-
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
-        highlights:
-          - Description 1.
-          - Description 2.
-
+    - institution: Birla Institute of Technology and Science, Pilani
+      location: Pilani, Rajasthan, India
+      area: Design and Development of Blockchain-based Schemes for Enabling Intelligent Transportation Systems
+      studyType: Ph.D. in Electrical and Electronics Engineering
+      start_date: 2022
+      end_date: 2025
+      highlights:
+      - Completed doctoral research under the supervision of Prof. Vinay Chamola.
+      - Focused on blockchain-enabled intelligent transportation systems, Edge AI, IoT, and multimodal learning.
+    - institution: University School of Information, Communication and Technology
+      location: New Delhi, India
+      area: Computer Science and Engineering
+      studyType: M.Tech.
+      start_date: 2019
+      end_date: 2021
+      highlights:
+      - 'Percentage: 87.60 / 100'
+    - institution: Institution of Electronics and Telecommunication Engineers
+      location: New Delhi, India
+      area: Computer Science and Engineering
+      studyType: B.Tech.
+      start_date: 2008
+      end_date: 2012
+      highlights:
+      - 'CGPA: 7.60 / 10'
+    - institution: Guru Nanak Inter College
+      location: Mirzapur, Uttar Pradesh, India
+      area: BHSIEUP
+      studyType: Class XII
+      start_date: 2008
+      end_date: 2008
+      highlights:
+      - 'Percentage: 65 / 100'
+    - institution: Sarvoday Public School
+      location: Pandari, Mirzapur, Uttar Pradesh, India
+      area: BHSIEUP
+      studyType: Class X
+      start_date: 2006
+      end_date: 2006
+      highlights:
+      - 'Percentage: 67.50 / 100'
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
-        highlights:
-          - Relativity
-          - Description 2.
-
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
-        highlights:
-          - Description 1.
-          - Description 2.
-
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
-        highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
-
+    - company: UPES Dehradun
+      position: Assistant Professor (Selection Grade)
+      location: Dehradun, Uttarakhand, India
+      start_date: 2025
+      end_date: Present
+      summary: Teaching and research in blockchain, IoT, Edge AI, federated learning, and intelligent systems.
+      highlights:
+      - Contributing to academic teaching, research mentoring, and curriculum development.
+      - Engaged in research on secure and scalable intelligent transportation and smart environment systems.
+    - company: Pranveer Singh Institute of Technology
+      position: Assistant Professor
+      location: Kanpur, Uttar Pradesh, India
+      start_date: 2021
+      end_date: 2022
+      highlights:
+      - Taught core computing subjects including Java, C, C++, data structures, and related areas.
+    - company: Tejas Engineers Academy
+      position: Programming Language Trainer
+      location: New Delhi, India
+      start_date: 2012
+      end_date: 2019
+      highlights:
+      - Trained students in C, C++, Java, and core computer science subjects.
+      - Built approximately eight years of cumulative teaching experience.
+    - company: HCL CDC
+      position: Intern
+      location: New Delhi, India
+      start_date: 2012
+      end_date: 2012
+      summary: Internship focused on Java and Advanced Java.
+      highlights:
+      - Gained hands-on exposure to practical software development using Java technologies.
     Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
-
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
-
+    - title: Outstanding Research Article Award
+      date: '2025-04-19'
+      awarder: Department of Electrical and Electronics Engineering, BITS Pilani
+      summary: Awarded during the Doctoral Colloquium for the paper "A Review on Emergency Vehicle Management for Intelligent Transportation Systems."
+    - title: Top 10 Most-Cited Paper Recognition
+      date: '2025-04-15'
+      awarder: IET Quantum Communication
+      summary: Recognized for "Quantum Computing Applications for Internet of Things" as one of the journal's Top 10 Most-Cited Papers.
+    - title: IETE Academic Top 10
+      date: '2012-06-15'
+      awarder: Institution of Electronics and Telecommunication Engineers
+      summary: Listed among the IETE Academic Top 10 Students.
     Publications:
-      - title: Zur Elektrodynamik bewegter Körper
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
-
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
-
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
-
+    - title: Blockchain-enabled Intrusion Detection Systems for Real-Time Vehicle Monitoring
+      publisher: Vehicular Communications, Elsevier
+      releaseDate: '2025-07-26'
+      summary: SCIE Q1 journal article on blockchain-enabled intrusion detection for reliable real-time vehicle monitoring.
+    - title: Blockchain-Based Game Theoretical Framework for V2V and V2G Energy Trading in Carbon-Intelligent Internet of Vehicles
+      publisher: IEEE Internet of Things Journal
+      releaseDate: '2025-07-07'
+      summary: SCIE Q1 publication on blockchain and game theory for energy trading in intelligent vehicular systems.
+    - title: 'Decentralized Trust: NFT and Blockchain-Enabled Evidence System Using Fog Computing'
+      publisher: 'Blockchain: Research and Applications, Elsevier'
+      releaseDate: '2025-06-30'
+      summary: ESCI Q1 article presenting a decentralized evidence framework combining NFTs, blockchain, and fog computing.
+    - title: 'Future of Connectivity: A Comprehensive Review of Innovations and Challenges in 7G Smart Networks'
+      publisher: IEEE Open Journal of the Communications Society
+      releaseDate: '2025-04-11'
+      summary: ESCI Q1 review article on the future of 7G smart networks.
+    - title: A Review on Emergency Vehicle Management for Intelligent Transportation Systems
+      publisher: IEEE Transactions on Intelligent Transportation Systems
+      releaseDate: '2024-08-20'
+      summary: SCIE Q1 journal paper recognized with the Outstanding Research Article Award at BITS Pilani.
+    - title: Quantum Computing Applications for Internet of Things
+      publisher: IET Quantum Communication
+      releaseDate: '2023-11-28'
+      summary: ESCI Q2 paper recognized among the Top 10 Most-Cited papers in the journal.
     Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
+    - name: Research Areas
+      level: Advanced
+      icon: fa-solid fa-microchip
+      keywords:
+      - Blockchain
+      - Internet of Things
+      - Edge AI
+      - Federated Learning
+      - Multimodal Machine Learning
+      - Intelligent Transportation Systems
+    - name: Programming
+      level: Advanced
+      icon: fa-solid fa-code
+      keywords:
+      - C
+      - C++
+      - Java
+      - Python
+      - JavaScript
+      - Go
+      - C#
+    - name: Core Subjects
+      level: Advanced
+      icon: fa-solid fa-laptop-code
+      keywords:
+      - Data Structures
+      - Algorithms
+      - Operating Systems
+      - DBMS
+      - Computer Networks
+      - Compiler Design
+      - Computer Architecture
+    - name: Research Tools
+      level: Advanced
+      icon: fa-solid fa-flask
+      keywords:
+      - Overleaf
+      - LaTeX
+      - Matplotlib
+      - Cryptography
+      - Artificial Intelligence
+      - Machine Learning
     Languages:
-      - name: German
-        summary: "Native speaker"
-
-      - name: English
-        summary: "Fluent"
-
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
+    - name: Hindi
+      summary: Native / Professional proficiency
+    - name: English
+      summary: Professional proficiency
     Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
-
+    - name: Faculty Development Program on Advanced Architectures and Real-Time Systems for Intelligent Embedded Applications
+      date: '2026-01-09'
+      issuer: E&ICT Academy, IIT Guwahati
+      icon: fa-solid fa-certificate
+    - name: Intelligent Systems and Emerging Technologies in Computing and Electronics (ISETCE-2025)
+      date: '2025-07-25'
+      issuer: UPES Dehradun in collaboration with NIT Jamshedpur
+      icon: fa-solid fa-certificate
+    - name: Project Management
+      date: '2022-05-28'
+      issuer: E&ICT Academy, IIT Kanpur
+      icon: fa-solid fa-certificate
+    - name: Quantum Computing - Building Concepts Advanced FDP
+      date: '2022-02-11'
+      issuer: Amity Institute of Information Technology, Amity University Uttar Pradesh
+      icon: fa-solid fa-certificate
+    - name: Quantum Computing
+      date: '2020-11-27'
+      issuer: Malaviya National Institute of Technology Jaipur
+      icon: fa-solid fa-certificate
+    Academic Interests:
+    - name: Research Interests
+      icon: fa-solid fa-lightbulb
+      keywords:
+      - Blockchain for transportation and smart environments
+      - Secure IoT and consumer electronics
+      - Quantum computing applications
+      - Edge AI and multimodal learning
+      - Intelligent vehicular systems
+    Professional Service:
+    - bullet: Reviewer for *Expert Systems*, *Intelligent Transportation Systems*, *Cognitive Computation*, *Computers and Electrical Engineering*, and *IET Blockchain*.
+    - bullet: Presented research at international venues including IEEE Global Communications Conference (GLOBECOM).
+    - bullet: Active in academic mentoring, teaching, and interdisciplinary research collaborations.
+    Personal Details:
+    - label: Date of Birth
+      details: 04 Apr 1992
+    - label: Gender
+      details: Male
+    - label: Marital Status
+      details: Married
+    - label: Current Address
+      details: Village and Post Pandari, District Mirzapur, Uttar Pradesh, India - 231001
+    - label: Additional Emails
+      details: mritunjay.peelam@pilani.bits-pilani.ac.in | mritunjay.peelam@ddn.upes.ac.in
+    Web Links:
+    - label: Google Scholar
+      details: https://scholar.google.com/citations?user=MdGRPEIAAAAJ&hl=en
+    - label: LinkedIn
+      details: https://www.linkedin.com/in/mritunjay-shall-peelam-37810553/
+    - label: GitHub
+      details: https://github.com/shall786
+    - label: YouTube
+      details: http://www.youtube.com/@msptutorial7884
+    - label: Facebook
+      details: https://www.facebook.com/mritunjay.iete/
+    - label: X
+      details: https://twitter.com/AmGone
     References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
-
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+    - name: Prof. Vinay Chamola
+      icon: fa-solid fa-user-tie
+      reference: 'Associate Professor, Department of Electrical and Electronics Engineering, BITS Pilani. Email: vinay.chamola@pilani.bits-pilani.ac.in | Contact: +91-9928070448'
+    - name: Prof. Biplab Sikdar
+      icon: fa-solid fa-user-tie
+      reference: 'Professor and Head, Department of Electrical and Computer Engineering, National University of Singapore. Email: bsikdar@nus.edu.sg | Contact: +65-6516 2291'
+    - name: Prof. Mohsen Guizani
+      icon: fa-solid fa-user-tie
+      reference: 'Professor, Machine Learning Department, Mohamed bin Zayed University of Artificial Intelligence. Email: mohsen.guizani@mbzuai.ac.ae | Contact: +971-2-8113333'
+    - name: Prof. G Sai Sesha Chalapathi
+      icon: fa-solid fa-user-tie
+      reference: 'Assistant Professor, BITS Pilani. Email: gssc@pilani.bits-pilani.ac.in | Contact: +91-7230289677'
+    - name: Prof. Tejasvi Alladi
+      icon: fa-solid fa-user-tie
+      reference: 'Assistant Professor, BITS Pilani. Email: tejasvi.alladi@pilani.bits-pilani.ac.in | Contact: +91-9177275667'
+    - name: Prof. Brijesh Kumar Chaurasia
+      icon: fa-solid fa-user-tie
+      reference: 'Professor and Research Dean, PSIT Kanpur. Email: deanresearch@psit.ac.in, brijesh.chaurasia@psit.ac.in | Contact: +91-8770180714'
