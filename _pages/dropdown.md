@@ -5,9 +5,12 @@ nav: true
 nav_order: 8
 dropdown: true
 children:
-  - title: Bookshelf
-    permalink: /books/
-  - title: divider
-  - title: Blog
-    permalink: /blog/
+  - title: Game
+    permalink: /game/
+  - title: Bhagwatgita
+    permalink: /bhagwatgita/
+  - title: Poems
+    permalink: /poems/
+  - title: Motivations
+    permalink: /motivations/
 ---
