@@ -236,8 +236,8 @@
 
 .travel-blog-grid {
   .header-bar {
-    padding-top: 1.25rem;
-    padding-bottom: 1.9rem;
+    padding-top: 0.3rem;
+    padding-bottom: 1.35rem;
 
     h1 {
       background: linear-gradient(90deg, #2f855a, #38a169, #4fd1c5, #d4af37, #2f855a);
@@ -355,8 +355,8 @@
 @media (max-width: 991.98px) {
   .travel-blog-grid {
     .header-bar {
-      padding-top: 1rem;
-      padding-bottom: 1.6rem;
+      padding-top: 0.2rem;
+      padding-bottom: 1.15rem;
 
       .travel-quote-wrap {
         min-height: 5rem;
@@ -378,6 +378,9 @@
 @media (max-width: 575.98px) {
   .travel-blog-grid {
     .header-bar {
+      padding-top: 0.1rem;
+      padding-bottom: 1rem;
+
       h1 {
         font-size: 2rem;
       }
