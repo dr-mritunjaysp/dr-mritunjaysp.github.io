@@ -240,16 +240,53 @@
     padding-bottom: 1.9rem;
 
     h1 {
-      font-size: clamp(2.75rem, 5vw, 4rem);
-      line-height: 1.05;
-      margin-bottom: 0.65rem;
+      background: linear-gradient(90deg, #2f855a, #38a169, #4fd1c5, #d4af37, #2f855a);
+      background-size: 240% 240%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      animation: travel-nature-gradient 6s ease-in-out infinite;
+      font-size: clamp(2.35rem, 4.3vw, 3.45rem);
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      line-height: 1.08;
+      margin-bottom: 0.8rem;
     }
 
-    h2 {
-      font-size: clamp(1rem, 1.5vw, 1.35rem);
-      line-height: 1.45;
+    .travel-quote-wrap {
       margin: 0 auto;
-      max-width: 42rem;
+      max-width: 44rem;
+      min-height: 5.5rem;
+    }
+
+    .travel-kicker {
+      color: var(--global-text-color-light);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      margin-bottom: 0.6rem;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .travel-typed-quote {
+      animation:
+        travel-caret-blink 0.9s steps(1) infinite,
+        travel-quote-glow 2.6s ease-in-out infinite;
+      border-right: 2px solid rgba(79, 209, 197, 0.9);
+      color: var(--global-text-color);
+      display: inline-block;
+      font-size: clamp(0.98rem, 1.45vw, 1.28rem);
+      font-style: italic;
+      font-weight: 600;
+      line-height: 1.55;
+      margin: 0 auto;
+      max-width: 100%;
+      min-height: 3.2rem;
+      padding-right: 0.18rem;
+      text-align: center;
+      width: fit-content;
     }
   }
 
@@ -320,6 +357,10 @@
     .header-bar {
       padding-top: 1rem;
       padding-bottom: 1.6rem;
+
+      .travel-quote-wrap {
+        min-height: 5rem;
+      }
     }
 
     .card {
@@ -338,11 +379,22 @@
   .travel-blog-grid {
     .header-bar {
       h1 {
-        font-size: 2.3rem;
+        font-size: 2rem;
       }
 
-      h2 {
-        font-size: 0.98rem;
+      .travel-kicker {
+        font-size: 0.68rem;
+        letter-spacing: 0.16em;
+      }
+
+      .travel-quote-wrap {
+        min-height: 4.6rem;
+      }
+
+      .travel-typed-quote {
+        font-size: 0.92rem;
+        line-height: 1.5;
+        min-height: 2.9rem;
       }
     }
 
@@ -364,5 +416,42 @@
         font-size: 0.68rem;
       }
     }
+  }
+}
+
+@keyframes travel-nature-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes travel-caret-blink {
+  0%,
+  49% {
+    border-right-color: rgba(79, 209, 197, 0.95);
+  }
+
+  50%,
+  100% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes travel-quote-glow {
+  0%,
+  100% {
+    text-shadow: 0 0 0 rgba(56, 161, 105, 0);
+  }
+
+  50% {
+    text-shadow: 0 0 14px rgba(79, 209, 197, 0.12);
   }
 }
