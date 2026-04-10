@@ -52,7 +52,26 @@
         background-size: auto, 250% 250%;
         border: 1.5px solid transparent;
         border-radius: 50%;
-        color: var(--global-text-color);
+        content: "";
+        display: inline-flex;
+        height: 1.7rem;
+        justify-content: center;
+        left: 0;
+        line-height: 1;
+        position: absolute;
+        top: 0.15rem;
+        width: 1.7rem;
+      }
+
+      &::after {
+        animation:
+          social-gradient 2.5s linear infinite,
+          section-count-blink 1s ease-in-out infinite;
+        background: linear-gradient(90deg, #06d6a0, #22d3ee, #f59e0b, #ef4444, #7c3aed, #06d6a0);
+        background-size: 260% 260%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
         content: counter(publication-counter);
         display: inline-flex;
         font-size: 0.76rem;
@@ -62,8 +81,10 @@
         left: 0;
         line-height: 1;
         position: absolute;
+        text-shadow: 0 0 8px rgba(34, 211, 238, 0.12);
         top: 0.15rem;
         width: 1.7rem;
+        -webkit-text-fill-color: transparent;
       }
 
       .preview {

@@ -58,7 +58,9 @@ layout: default
     {% if page.selected_papers %}
       <h2 class="section-heading-inline">
         <a href="{{ '/publications/' | relative_url }}" style="color: inherit">publications</a>
-        <span class="section-count-badge" id="publication-count-badge" aria-label="Publications count">0</span>
+        <span class="section-count-badge" id="publication-count-badge" aria-label="Publications count">
+          <span class="section-count-badge-value">0</span>
+        </span>
       </h2>
       {% include selected_papers.liquid %}
       <script>
@@ -68,7 +70,12 @@ layout: default
           if (!badge) return;
 
           const publicationCount = items.length;
-          badge.textContent = publicationCount;
+          const value = badge.querySelector('.section-count-badge-value');
+          if (value) {
+            value.textContent = publicationCount;
+          } else {
+            badge.textContent = publicationCount;
+          }
           badge.setAttribute('aria-label', `${publicationCount} publications`);
         });
       </script>

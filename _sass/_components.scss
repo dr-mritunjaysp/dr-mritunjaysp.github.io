@@ -152,7 +152,6 @@ ul.task-list input[type="checkbox"] {
     border: 2px solid transparent;
     border-radius: 50%;
     box-shadow: 0 0 16px rgba(34, 197, 94, 0.12);
-    color: var(--global-text-color);
     display: inline-flex;
     font-size: 0.95rem;
     font-weight: 700;
@@ -161,6 +160,21 @@ ul.task-list input[type="checkbox"] {
     line-height: 1;
     min-width: 2.35rem;
     padding: 0.2rem;
+
+    .section-count-badge-value {
+      animation:
+        social-gradient 2.5s linear infinite,
+        section-count-blink 1s ease-in-out infinite;
+      background: linear-gradient(90deg, #06d6a0, #22d3ee, #f59e0b, #ef4444, #7c3aed, #06d6a0);
+      background-size: 260% 260%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      line-height: 1;
+      text-shadow: 0 0 10px rgba(34, 211, 238, 0.12);
+    }
   }
 }
 
