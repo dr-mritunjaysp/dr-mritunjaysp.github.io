@@ -141,7 +141,9 @@ ul.task-list input[type="checkbox"] {
 
   .section-count-badge {
     align-items: center;
-    animation: section-count-gradient 4s linear infinite;
+    animation:
+      section-count-gradient 4s linear infinite,
+      section-count-blink 1s ease-in-out infinite;
     background:
       linear-gradient(var(--global-card-bg-color), var(--global-card-bg-color)) padding-box,
       linear-gradient(135deg, #7c3aed, #06b6d4, #10b981, #f59e0b, #ef4444, #7c3aed) border-box;
@@ -198,6 +200,19 @@ ul.task-list input[type="checkbox"] {
 
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes section-count-blink {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.72;
+    transform: scale(0.95);
   }
 }
 
