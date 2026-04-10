@@ -75,11 +75,12 @@
         color: transparent;
         content: counter(publication-counter);
         display: inline-flex;
-        font-size: 0.76rem;
+        font-size: 0.9rem;
         font-weight: 600;
         height: 1.7rem;
         justify-content: center;
         left: 0;
+        align-items: center;
         line-height: 1;
         position: absolute;
         text-shadow:
