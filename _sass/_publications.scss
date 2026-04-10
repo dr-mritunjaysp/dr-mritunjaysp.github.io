@@ -45,18 +45,14 @@
 
       &::before {
         align-items: center;
-        animation:
-          social-gradient 3s linear infinite,
-          publication-circle-glow 1.4s ease-in-out infinite;
+        animation: none;
         background:
           linear-gradient(var(--global-card-bg-color), var(--global-card-bg-color)) padding-box,
           linear-gradient(135deg, #7c3aed, #06b6d4, #10b981, #f59e0b, #ef4444, #7c3aed) border-box;
         background-size: auto, 250% 250%;
         border: 1.5px solid transparent;
         border-radius: 50%;
-        box-shadow:
-          0 0 8px rgba(34, 211, 238, 0.1),
-          0 0 12px rgba(245, 158, 11, 0.08);
+        box-shadow: 0 0 10px rgba(34, 211, 238, 0.12);
         content: "";
         display: inline-flex;
         height: 1.7rem;
@@ -69,14 +65,9 @@
       }
 
       &::after {
-        animation:
-          social-gradient 2.5s linear infinite,
-          publication-count-blink 1s ease-in-out infinite,
-          publication-count-glow 1.8s ease-in-out infinite,
-          publication-count-pulse 1.2s ease-in-out infinite,
-          publication-count-flicker 1.4s ease-in-out infinite;
+        animation: none;
         background: linear-gradient(90deg, #06d6a0, #22d3ee, #f59e0b, #ef4444, #7c3aed, #06d6a0);
-        background-size: 260% 260%;
+        background-size: 100% 100%;
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -90,9 +81,7 @@
         align-items: center;
         line-height: 1;
         position: absolute;
-        text-shadow:
-          0 0 8px rgba(34, 211, 238, 0.2),
-          0 0 14px rgba(245, 158, 11, 0.16);
+        text-shadow: 0 0 8px rgba(34, 211, 238, 0.12);
         top: 0.15rem;
         width: 1.7rem;
         -webkit-text-fill-color: transparent;
@@ -417,69 +406,3 @@
   }
 }
 
-@keyframes publication-count-blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.78;
-  }
-}
-
-@keyframes publication-count-glow {
-  0%,
-  100% {
-    filter: brightness(1) saturate(1);
-  }
-
-  50% {
-    filter: brightness(1.2) saturate(1.15);
-  }
-}
-
-@keyframes publication-count-pulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.08);
-  }
-}
-
-@keyframes publication-count-flicker {
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  40% {
-    opacity: 0.82;
-  }
-
-  55% {
-    opacity: 1;
-  }
-
-  70% {
-    opacity: 0.9;
-  }
-}
-
-@keyframes publication-circle-glow {
-  0%,
-  100% {
-    box-shadow:
-      0 0 8px rgba(34, 211, 238, 0.1),
-      0 0 12px rgba(245, 158, 11, 0.08);
-  }
-
-  50% {
-    box-shadow:
-      0 0 14px rgba(34, 211, 238, 0.22),
-      0 0 22px rgba(239, 68, 68, 0.18);
-  }
-}
