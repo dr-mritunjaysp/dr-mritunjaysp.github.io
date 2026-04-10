@@ -33,6 +33,10 @@ body.sticky-bottom-footer {
   max-width: v.$max-content-width;
 }
 
+.site-main-container {
+  margin-top: 1.4rem;
+}
+
 // Profile
 .profile {
   img {
@@ -56,3 +60,9 @@ body.sticky-bottom-footer {
 *****************************************************************************/
 
 // TODO: redefine projects layout.
+
+@media (max-width: 575.98px) {
+  .site-main-container {
+    margin-top: 1rem;
+  }
+}
