@@ -21,11 +21,11 @@
 
         if (charIndex >= currentQuote.length) {
           deleting = true;
-          window.setTimeout(typeLoop, 1800);
+          window.setTimeout(typeLoop, 1600);
           return;
         }
 
-        window.setTimeout(typeLoop, 42);
+        window.setTimeout(typeLoop, 36);
         return;
       }
 
@@ -35,11 +35,11 @@
       if (charIndex <= 0) {
         deleting = false;
         quoteIndex = (quoteIndex + 1) % quotes.length;
-        window.setTimeout(typeLoop, 260);
+        window.setTimeout(typeLoop, 220);
         return;
       }
 
-      window.setTimeout(typeLoop, 18);
+      window.setTimeout(typeLoop, 16);
     };
 
     quoteEl.textContent = '';
