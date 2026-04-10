@@ -66,7 +66,8 @@
       &::after {
         animation:
           social-gradient 2.5s linear infinite,
-          section-count-blink 1s ease-in-out infinite;
+          publication-count-blink 1s ease-in-out infinite,
+          publication-count-glow 1.8s ease-in-out infinite;
         background: linear-gradient(90deg, #06d6a0, #22d3ee, #f59e0b, #ef4444, #7c3aed, #06d6a0);
         background-size: 260% 260%;
         background-clip: text;
@@ -75,16 +76,19 @@
         content: counter(publication-counter);
         display: inline-flex;
         font-size: 0.76rem;
-        font-weight: 400;
+        font-weight: 600;
         height: 1.7rem;
         justify-content: center;
         left: 0;
         line-height: 1;
         position: absolute;
-        text-shadow: 0 0 8px rgba(34, 211, 238, 0.12);
+        text-shadow:
+          0 0 8px rgba(34, 211, 238, 0.2),
+          0 0 14px rgba(245, 158, 11, 0.16);
         top: 0.15rem;
         width: 1.7rem;
         -webkit-text-fill-color: transparent;
+        z-index: 1;
       }
 
       .preview {
@@ -402,5 +406,27 @@
 
   100% {
     background-position: 0 0, 0% 50%;
+  }
+}
+
+@keyframes publication-count-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.78;
+  }
+}
+
+@keyframes publication-count-glow {
+  0%,
+  100% {
+    filter: brightness(1) saturate(1);
+  }
+
+  50% {
+    filter: brightness(1.2) saturate(1.15);
   }
 }

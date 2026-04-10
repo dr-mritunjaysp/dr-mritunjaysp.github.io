@@ -164,7 +164,8 @@ ul.task-list input[type="checkbox"] {
     .section-count-badge-value {
       animation:
         social-gradient 2.5s linear infinite,
-        section-count-blink 1s ease-in-out infinite;
+        section-count-blink 1s ease-in-out infinite,
+        publication-count-glow 1.8s ease-in-out infinite;
       background: linear-gradient(90deg, #06d6a0, #22d3ee, #f59e0b, #ef4444, #7c3aed, #06d6a0);
       background-size: 260% 260%;
       background-clip: text;
@@ -172,8 +173,11 @@ ul.task-list input[type="checkbox"] {
       color: transparent;
       -webkit-text-fill-color: transparent;
       display: inline-block;
+      font-weight: 700;
       line-height: 1;
-      text-shadow: 0 0 10px rgba(34, 211, 238, 0.12);
+      text-shadow:
+        0 0 10px rgba(34, 211, 238, 0.22),
+        0 0 16px rgba(245, 158, 11, 0.16);
     }
   }
 }
