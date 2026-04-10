@@ -56,15 +56,22 @@ layout: default
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      {% assign publication_count = 0 %}
-      {% if site.data.citations and site.data.citations.papers %}
-        {% assign publication_count = site.data.citations.papers | size %}
-      {% endif %}
       <h2 class="section-heading-inline">
         <a href="{{ '/publications/' | relative_url }}" style="color: inherit">publications</a>
-        <span class="section-count-badge" aria-label="{{ publication_count }} publications">{{ publication_count }}</span>
+        <span class="section-count-badge" id="publication-count-badge" aria-label="Publications count">0</span>
       </h2>
       {% include selected_papers.liquid %}
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const badge = document.getElementById('publication-count-badge');
+          const items = document.querySelectorAll('.publications ol.bibliography > li');
+          if (!badge) return;
+
+          const publicationCount = items.length;
+          badge.textContent = publicationCount;
+          badge.setAttribute('aria-label', `${publicationCount} publications`);
+        });
+      </script>
     {% endif %}
 
     <!-- Social -->
