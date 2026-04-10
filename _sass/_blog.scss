@@ -233,3 +233,136 @@
     background-position: 100% 50%;
   }
 }
+
+.travel-blog-grid {
+  .header-bar {
+    padding-top: 1.25rem;
+    padding-bottom: 1.9rem;
+
+    h1 {
+      font-size: clamp(2.75rem, 5vw, 4rem);
+      line-height: 1.05;
+      margin-bottom: 0.65rem;
+    }
+
+    h2 {
+      font-size: clamp(1rem, 1.5vw, 1.35rem);
+      line-height: 1.45;
+      margin: 0 auto;
+      max-width: 42rem;
+    }
+  }
+
+  .compact-travel-row {
+    row-gap: 1rem;
+  }
+
+  .col {
+    padding-bottom: 0.25rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .card {
+    border-radius: 0.9rem;
+    overflow: hidden;
+
+    .card-img-top,
+    figure,
+    img {
+      width: 100%;
+    }
+
+    .card-img-top,
+    figure {
+      aspect-ratio: 16 / 10;
+      margin-bottom: 0;
+      overflow: hidden;
+    }
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 0.9rem 0.95rem 0.95rem;
+    }
+
+    .card-title {
+      font-size: 1.05rem;
+      line-height: 1.25;
+      margin-bottom: 0.45rem;
+    }
+
+    .card-text {
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      color: var(--global-text-color-light);
+      display: -webkit-box;
+      font-size: 0.82rem;
+      line-height: 1.45;
+      margin-bottom: 0.5rem;
+      overflow: hidden;
+    }
+
+    .post-meta {
+      font-size: 0.72rem;
+      letter-spacing: 0.02em;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .travel-blog-grid {
+    .header-bar {
+      padding-top: 1rem;
+      padding-bottom: 1.6rem;
+    }
+
+    .card {
+      .card-body {
+        padding: 0.85rem 0.85rem 0.9rem;
+      }
+
+      .card-title {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .travel-blog-grid {
+    .header-bar {
+      h1 {
+        font-size: 2.3rem;
+      }
+
+      h2 {
+        font-size: 0.98rem;
+      }
+    }
+
+    .card {
+      .card-img-top,
+      figure {
+        aspect-ratio: 16 / 9;
+      }
+
+      .card-title {
+        font-size: 0.95rem;
+      }
+
+      .card-text {
+        font-size: 0.78rem;
+      }
+
+      .post-meta {
+        font-size: 0.68rem;
+      }
+    }
+  }
+}
