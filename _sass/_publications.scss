@@ -168,11 +168,19 @@
       }
 
       .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        align-items: center;
+
         a.btn {
           --bs-btn-color: var(--global-text-color);
           --bs-btn-hover-color: var(--global-text-color);
           --bs-btn-active-color: var(--global-text-color);
           --bs-btn-disabled-color: var(--global-text-color);
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
           color: var(--global-text-color) !important;
           background:
             linear-gradient(var(--global-card-bg-color), var(--global-card-bg-color)) padding-box,
@@ -180,14 +188,12 @@
           background-size: auto, 300% 300%;
           border: 2px solid transparent;
           border-radius: 999px;
-          padding-left: 1.05rem;
-          padding-right: 1.05rem;
-          padding-top: 0.42rem;
-          padding-bottom: 0.42rem;
-          margin-left: 0;
-          font-size: 0.82rem;
-          font-weight: 600;
+          padding: 0.34rem 0.9rem;
+          margin: 0;
+          font-size: 0.76rem;
+          font-weight: 500;
           line-height: 1.2;
+          white-space: nowrap;
           animation: social-gradient 3s linear infinite;
 
           &:hover {
@@ -206,6 +212,17 @@
           background:
             linear-gradient(var(--global-card-bg-color), var(--global-card-bg-color)) padding-box,
             linear-gradient(90deg, #ff7a18, #ff3d81, #7c4dff, #00c2ff, #2dd4bf, #ff7a18) border-box;
+        }
+
+        @media (max-width: 576px) {
+          gap: 0.35rem;
+
+          a.btn {
+            padding: 0.28rem 0.72rem;
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+          }
         }
       }
 
