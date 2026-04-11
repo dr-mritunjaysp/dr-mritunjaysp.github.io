@@ -39,7 +39,7 @@ ninja.data = [{
           },
         },{id: "nav-teaching",
           title: "Teaching",
-          description: "Course materials, schedules, and resources for classes taught.",
+          description: "Education, courses, and learning resources guided by Dr. Mritunjay Shall Peelam.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
@@ -563,14 +563,9 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
-            },},{id: "teachings-data-science-fundamentals",
-          title: 'Data Science Fundamentals',
-          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
-          section: "Teachings",handler: () => {
-              window.location.href = "/teachings/data-science-fundamentals/";
-            },},{id: "teachings-introduction-to-machine-learning",
-          title: 'Introduction to Machine Learning',
-          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
+            },},{id: "teachings-software-engineering",
+          title: 'Software Engineering',
+          description: "This course introduces software engineering principles, software development life cycle models, requirements engineering, design practices, testing, maintenance, and teamwork for building reliable software systems.",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/introduction-to-machine-learning/";
             },},{
