@@ -144,7 +144,7 @@
   <span class="na">pages</span> <span class="p">=</span> <span class="s">{227--235}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2021}</span><span class="p">,</span>
 <span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Dr. Mritunjay Shall Peelam. Last updated: April 11, 2026. </div> </footer> <script type="module">
-      import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js';
+      import { getApp, getApps, initializeApp } from 'https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js';
       import {
         getDatabase,
         get,
@@ -200,7 +200,7 @@
         const pageKey = "/publications/";
 
         try {
-          const app = initializeApp(firebaseConfig);
+          const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
           const database = getDatabase(app);
           const counterRef = ref(database, `visitor-counter/${pageKey}`);
 
