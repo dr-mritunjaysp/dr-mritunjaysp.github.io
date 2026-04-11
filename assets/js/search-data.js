@@ -563,11 +563,26 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
+            },},{id: "teachings-computer-organization",
+          title: 'Computer Organization',
+          description: "This course develops understanding of how digital logic, instruction execution, memory hierarchy, and processor design shape the behavior of computing systems.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/computer-organization/";
+            },},{id: "teachings-data-structures",
+          title: 'Data Structures',
+          description: "This course explores core data structures, their design tradeoffs, and how they support efficient problem solving in real software systems.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/data-structures/";
             },},{id: "teachings-software-engineering",
           title: 'Software Engineering',
           description: "This course introduces software engineering principles, software development life cycle models, requirements engineering, design practices, testing, maintenance, and teamwork for building reliable software systems.",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/introduction-to-machine-learning/";
+            },},{id: "teachings-operating-systems",
+          title: 'Operating Systems',
+          description: "This course introduces the principles of process management, memory organization, scheduling, synchronization, and resource control in modern operating systems.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/operating-systems/";
             },},{
         id: 'social-cv',
         title: 'CV',
