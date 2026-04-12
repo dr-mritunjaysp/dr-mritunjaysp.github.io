@@ -58,6 +58,13 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/game/";
               },
+            },{id: "dropdown-daily-mantra",
+              title: "Daily Mantra",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/daily-mantra/";
+              },
             },{id: "dropdown-bhagwatgita",
               title: "Bhagwatgita",
               description: "",
