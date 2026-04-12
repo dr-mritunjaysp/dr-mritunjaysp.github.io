@@ -1201,30 +1201,38 @@ But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
     const currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
     const pageCounterId = configuredCounterId || normalizeCounterKey(currentPath === '/' ? 'home' : currentPath);
     const currentScope = String(counterScope || 'site').toLowerCase() === 'page' ? 'page' : 'site';
-    const counterPath =
+    const viewsCounterPath =
+      currentScope === 'page'
+        ? `visitor-counter/pages/${pageCounterId}/views`
+        : 'visitor-counter/site-total-views';
+    const clicksCounterPath =
       currentScope === 'page'
         ? `visitor-counter/pages/${pageCounterId}/clicks`
         : 'visitor-counter/site-total-clicks';
-    const pendingStorageKey =
+    const pendingViewsStorageKey =
+      currentScope === 'page'
+        ? `visitor-counter:pending-views:page:${pageCounterId}`
+        : 'visitor-counter:pending-views:site-total';
+    const pendingClicksStorageKey =
       currentScope === 'page'
         ? `visitor-counter:pending-clicks:page:${pageCounterId}`
         : 'visitor-counter:pending-clicks:site-total';
 
-    const getPendingClicks = () => {
+    const getPendingCount = (storageKey) => {
       try {
-        return parseCounterValue(window.localStorage.getItem(pendingStorageKey));
+        return parseCounterValue(window.localStorage.getItem(storageKey));
       } catch (error) {
         return 0;
       }
     };
 
-    const setPendingClicks = (count) => {
+    const setPendingCount = (storageKey, count) => {
       try {
         const safeCount = parseCounterValue(count);
         if (safeCount <= 0) {
-          window.localStorage.removeItem(pendingStorageKey);
+          window.localStorage.removeItem(storageKey);
         } else {
-          window.localStorage.setItem(pendingStorageKey, String(safeCount));
+          window.localStorage.setItem(storageKey, String(safeCount));
         }
       } catch (error) {
         // Ignore storage failures and continue attempting live syncs.
@@ -1234,42 +1242,66 @@ But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
     try {
       const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
       const database = getDatabase(app);
-      const counterRef = ref(database, counterPath);
+      const viewsCounterRef = ref(database, viewsCounterPath);
+      const clicksCounterRef = ref(database, clicksCounterPath);
+      let latestViewsCount = 0;
+      let latestClicksCount = 0;
+      let lastRenderedTotal = null;
 
-      if (valueNode) {
-        let lastRenderedCount = null;
-        onValue(
-          counterRef,
-          (snapshot) => {
-            const nextValue = parseCounterValue(snapshot.exists() ? snapshot.val() : 0);
-            if (lastRenderedCount === null || nextValue !== lastRenderedCount) {
-              animateValue(nextValue);
-              lastRenderedCount = nextValue;
-            }
-          },
-          () => {
-            valueNode.textContent = '0';
-          }
-        );
-      }
+      const renderCombinedTotal = () => {
+        const total =
+          latestViewsCount +
+          latestClicksCount +
+          getPendingCount(pendingViewsStorageKey) +
+          getPendingCount(pendingClicksStorageKey);
+        if (lastRenderedTotal === null || total !== lastRenderedTotal) {
+          animateValue(total);
+          lastRenderedTotal = total;
+        }
+      };
 
-      let flushTimer = null;
-      let flushing = false;
+      onValue(
+        viewsCounterRef,
+        (snapshot) => {
+          latestViewsCount = parseCounterValue(snapshot.exists() ? snapshot.val() : 0);
+          renderCombinedTotal();
+        },
+        () => {
+          latestViewsCount = 0;
+          renderCombinedTotal();
+        }
+      );
 
-      const flushPendingClicks = async () => {
-        if (flushing) {
+      onValue(
+        clicksCounterRef,
+        (snapshot) => {
+          latestClicksCount = parseCounterValue(snapshot.exists() ? snapshot.val() : 0);
+          renderCombinedTotal();
+        },
+        () => {
+          latestClicksCount = 0;
+          renderCombinedTotal();
+        }
+      );
+
+      let hasQueuedCurrentPageView = false;
+      let flushingViews = false;
+      let flushingClicks = false;
+
+      const flushPendingViews = async () => {
+        if (flushingViews) {
           return;
         }
 
-        const delta = getPendingClicks();
+        const delta = getPendingCount(pendingViewsStorageKey);
         if (delta <= 0) {
           return;
         }
 
-        flushing = true;
+        flushingViews = true;
 
         try {
-          await runTransaction(counterRef, (currentValue) => {
+          const result = await runTransaction(viewsCounterRef, (currentValue) => {
             const nextCount = parseCounterValue(currentValue) + delta;
             return {
               count: nextCount,
@@ -1277,37 +1309,85 @@ But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
             };
           });
 
-          const remainingClicks = Math.max(0, getPendingClicks() - delta);
-          setPendingClicks(remainingClicks);
+          latestViewsCount = parseCounterValue(result.snapshot.exists() ? result.snapshot.val() : 0);
+          const remainingViews = Math.max(0, getPendingCount(pendingViewsStorageKey) - delta);
+          setPendingCount(pendingViewsStorageKey, remainingViews);
+          renderCombinedTotal();
         } catch (error) {
-          // Keep pending clicks in localStorage so they can sync on the next interaction/page load.
+          // Keep pending page views in localStorage so they can sync on the next page load/online event.
         } finally {
-          flushing = false;
-          if (getPendingClicks() > 0) {
-            scheduleFlush(800);
+          flushingViews = false;
+          if (getPendingCount(pendingViewsStorageKey) > 0) {
+            window.setTimeout(() => {
+              void flushPendingViews();
+            }, 800);
           }
         }
       };
 
-      const scheduleFlush = (delay = 250) => {
-        if (flushTimer !== null) {
+      const flushPendingClicks = async () => {
+        if (flushingClicks) {
           return;
         }
 
-        flushTimer = window.setTimeout(async () => {
-          flushTimer = null;
-          await flushPendingClicks();
-        }, delay);
+        const delta = getPendingCount(pendingClicksStorageKey);
+        if (delta <= 0) {
+          return;
+        }
+
+        flushingClicks = true;
+
+        try {
+          const result = await runTransaction(clicksCounterRef, (currentValue) => {
+            const nextCount = parseCounterValue(currentValue) + delta;
+            return {
+              count: nextCount,
+              updated_at: new Date().toISOString(),
+            };
+          });
+
+          latestClicksCount = parseCounterValue(result.snapshot.exists() ? result.snapshot.val() : 0);
+          const remainingClicks = Math.max(0, getPendingCount(pendingClicksStorageKey) - delta);
+          setPendingCount(pendingClicksStorageKey, remainingClicks);
+          renderCombinedTotal();
+        } catch (error) {
+          // Keep pending clicks in localStorage so they can sync on the next click/online event.
+        } finally {
+          flushingClicks = false;
+          if (getPendingCount(pendingClicksStorageKey) > 0) {
+            window.setTimeout(() => {
+              void flushPendingClicks();
+            }, 800);
+          }
+        }
+      };
+
+      const queuePageView = () => {
+        if (hasQueuedCurrentPageView) {
+          return;
+        }
+
+        hasQueuedCurrentPageView = true;
+        setPendingCount(pendingViewsStorageKey, getPendingCount(pendingViewsStorageKey) + 1);
+        renderCombinedTotal();
+        void flushPendingViews();
       };
 
       const queueClick = () => {
-        setPendingClicks(getPendingClicks() + 1);
-        scheduleFlush();
+        setPendingCount(pendingClicksStorageKey, getPendingCount(pendingClicksStorageKey) + 1);
+        renderCombinedTotal();
+        void flushPendingClicks();
       };
 
-      if (getPendingClicks() > 0) {
-        scheduleFlush(0);
+      if (getPendingCount(pendingViewsStorageKey) > 0) {
+        void flushPendingViews();
       }
+
+      if (getPendingCount(pendingClicksStorageKey) > 0) {
+        void flushPendingClicks();
+      }
+
+      queuePageView();
 
       document.addEventListener(
         'click',
@@ -1322,30 +1402,33 @@ But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
       );
 
       document.addEventListener('visibilitychange', () => {
-        if (document.visibilityState !== 'hidden') {
+        if (document.visibilityState !== 'visible') {
           return;
         }
 
-        if (flushTimer !== null) {
-          window.clearTimeout(flushTimer);
-          flushTimer = null;
+        if (getPendingCount(pendingViewsStorageKey) > 0) {
+          void flushPendingViews();
         }
-
-        void flushPendingClicks();
+        if (getPendingCount(pendingClicksStorageKey) > 0) {
+          void flushPendingClicks();
+        }
       });
 
       window.addEventListener('pagehide', () => {
-        if (flushTimer !== null) {
-          window.clearTimeout(flushTimer);
-          flushTimer = null;
+        if (getPendingCount(pendingViewsStorageKey) > 0) {
+          void flushPendingViews();
         }
-
-        void flushPendingClicks();
+        if (getPendingCount(pendingClicksStorageKey) > 0) {
+          void flushPendingClicks();
+        }
       });
 
       window.addEventListener('online', () => {
-        if (getPendingClicks() > 0) {
-          scheduleFlush(0);
+        if (getPendingCount(pendingViewsStorageKey) > 0) {
+          void flushPendingViews();
+        }
+        if (getPendingCount(pendingClicksStorageKey) > 0) {
+          void flushPendingClicks();
         }
       });
     } catch (error) {
