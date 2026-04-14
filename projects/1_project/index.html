@@ -14,7 +14,7 @@ img: /assets/img/12.jpg
     {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
-</code></pre></div></div> </article> <h2>References</h2> <div class="publications"> </div> </div> </div> <div class="social site-social-strip"> <div class="contact-icons"> <a href="/assets/pdf/Dr-Mritunjay_resume.pdf" title="Cv pdf"><i class="ai ai-cv"></i></a> <a href="mailto:mritunjay.peelam@ddn.upes.ac.in" title="Email"><i class="fa-solid fa-envelope"></i></a> <a href="https://scholar.google.com/citations?user=MdGRPEIAAAAJ" title="Scholar userid" rel="external nofollow noopener" target="_blank"><i class="ai ai-google-scholar"></i></a> <a href="https://orcid.org/0000-0002-8022-3815" title="Orcid id" rel="external nofollow noopener" target="_blank"><i class="ai ai-orcid"></i></a> <a href="https://wa.me/8745080986" title="Whatsapp number" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-whatsapp"></i></a> <a href="https://www.linkedin.com/in/mritunjay-shall-peelam" title="Linkedin username" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-linkedin"></i></a> <a href="https://youtube.com/@msptutorial7884" title="Youtube id" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-youtube"></i></a> </div> <div class="visitor-counter"> <span class="visitor-counter-pill"> <span class="visitor-counter-eye" aria-hidden="true"> <img src="/assets/img/view.gif" alt=""> </span> <span id="visitor-counter-value" class="visitor-counter-value">0</span> </span> <span class="visitor-counter-text"> <span class="visitor-counter-separator" aria-hidden="true"> | </span> <span class="visitor-counter-metric"> Citations : <span class="visitor-counter-metric-value">438</span> </span> <span class="visitor-counter-separator" aria-hidden="true"> | </span> <span class="visitor-counter-metric"> H-index : <span class="visitor-counter-metric-value">12</span> </span> <span class="visitor-counter-separator" aria-hidden="true"> | </span> <span class="visitor-counter-metric"> i10-index : <span class="visitor-counter-metric-value">13</span> </span> </span> </div> <div class="contact-note">The best way to reach me is via email — <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mritunjay.peelam@ddn.upes.ac.in" class="email-link" target="_blank" rel="external nofollow noopener">mritunjay.peelam@ddn.upes.ac.in</a>. </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Dr. Mritunjay Shall Peelam. Last updated: April 14, 2026. </div> </footer> <script type="module">
+</code></pre></div></div> </article> <h2>References</h2> <div class="publications"> </div> </div> </div> <div class="social site-social-strip"> <div class="contact-icons"> <a href="/assets/pdf/Dr-Mritunjay_resume.pdf" title="Cv pdf"><i class="ai ai-cv"></i></a> <a href="mailto:mritunjay.peelam@ddn.upes.ac.in" title="Email"><i class="fa-solid fa-envelope"></i></a> <a href="https://scholar.google.com/citations?user=MdGRPEIAAAAJ" title="Scholar userid" rel="external nofollow noopener" target="_blank"><i class="ai ai-google-scholar"></i></a> <a href="https://orcid.org/0000-0002-8022-3815" title="Orcid id" rel="external nofollow noopener" target="_blank"><i class="ai ai-orcid"></i></a> <a href="https://wa.me/8745080986" title="Whatsapp number" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-whatsapp"></i></a> <a href="https://www.linkedin.com/in/mritunjay-shall-peelam" title="Linkedin username" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-linkedin"></i></a> <a href="https://youtube.com/@msptutorial7884" title="Youtube id" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-youtube"></i></a> </div> <div class="visitor-counter"> <span class="visitor-counter-pill"> <span class="visitor-counter-eye" aria-hidden="true"> <img src="/assets/img/view.gif" alt=""> </span> <span id="visitor-counter-value" class="visitor-counter-value">0</span> </span> <span class="visitor-counter-text"> <span class="visitor-counter-separator" aria-hidden="true"> | </span> <span class="visitor-counter-metric"> Citations : <span id="scholar-citations-value" class="visitor-counter-metric-value" data-static-value="440"> 440 </span> </span> <span class="visitor-counter-separator" aria-hidden="true"> | </span> <span class="visitor-counter-metric"> H-index : <span id="scholar-h-index-value" class="visitor-counter-metric-value" data-static-value="12"> 12 </span> </span> <span class="visitor-counter-separator" aria-hidden="true"> | </span> <span class="visitor-counter-metric"> i10-index : <span id="scholar-i10-index-value" class="visitor-counter-metric-value" data-static-value="13"> 13 </span> </span> </span> </div> <div class="contact-note">The best way to reach me is via email — <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mritunjay.peelam@ddn.upes.ac.in" class="email-link" target="_blank" rel="external nofollow noopener">mritunjay.peelam@ddn.upes.ac.in</a>. </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Dr. Mritunjay Shall Peelam. Last updated: April 14, 2026. </div> </footer> <script type="module">
   import { getApp, getApps, initializeApp } from 'https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js';
   import {
     getDatabase,
@@ -25,6 +25,9 @@ img: /assets/img/12.jpg
 
   document.addEventListener('DOMContentLoaded', async function () {
     const valueNode = document.getElementById('visitor-counter-value');
+    const scholarCitationsNode = document.getElementById('scholar-citations-value');
+    const scholarHIndexNode = document.getElementById('scholar-h-index-value');
+    const scholarI10IndexNode = document.getElementById('scholar-i10-index-value');
     const counterScope = "site";
     const configuredCounterId = null;
 
@@ -137,6 +140,30 @@ img: /assets/img/12.jpg
       window.requestAnimationFrame(step);
     };
 
+    const renderScholarMetricNode = (node, value) => {
+      if (!node) {
+        return;
+      }
+
+      node.textContent = parseCounterValue(value).toLocaleString();
+    };
+
+    const renderScholarMetrics = (metrics) => {
+      if (!metrics || typeof metrics !== 'object') {
+        return;
+      }
+
+      renderScholarMetricNode(scholarCitationsNode, metrics.total_citations);
+      renderScholarMetricNode(scholarHIndexNode, metrics.h_index);
+      renderScholarMetricNode(scholarI10IndexNode, metrics.i10_index);
+    };
+
+    renderScholarMetrics({
+      total_citations: scholarCitationsNode?.dataset?.staticValue,
+      h_index: scholarHIndexNode?.dataset?.staticValue,
+      i10_index: scholarI10IndexNode?.dataset?.staticValue,
+    });
+
     const normalizeCounterKey = (value) => {
       const normalized = String(value || '')
         .toLowerCase()
@@ -158,6 +185,7 @@ img: /assets/img/12.jpg
       currentScope === 'page'
         ? `visitor-counter/pages/${pageCounterId}/clicks`
         : 'visitor-counter/site-total-clicks';
+    const scholarMetricsPath = 'visitor-counter/scholar-metrics/current';
     const pendingViewsStorageKey =
       currentScope === 'page'
         ? `visitor-counter:pending-views:page:${pageCounterId}`
@@ -193,6 +221,7 @@ img: /assets/img/12.jpg
       const database = getDatabase(app);
       const viewsCounterRef = ref(database, viewsCounterPath);
       const clicksCounterRef = ref(database, clicksCounterPath);
+      const scholarMetricsRef = ref(database, scholarMetricsPath);
       let latestViewsCount = 0;
       let latestClicksCount = 0;
       let lastRenderedTotal = null;
@@ -230,6 +259,21 @@ img: /assets/img/12.jpg
         () => {
           latestClicksCount = 0;
           renderCombinedTotal();
+        }
+      );
+
+      onValue(
+        scholarMetricsRef,
+        (snapshot) => {
+          if (!snapshot.exists()) {
+            return;
+          }
+
+          const scholarPayload = snapshot.val() || {};
+          renderScholarMetrics(scholarPayload.author_metrics || scholarPayload);
+        },
+        () => {
+          // Keep the statically rendered fallback values if live Scholar metrics cannot be loaded.
         }
       );
 
