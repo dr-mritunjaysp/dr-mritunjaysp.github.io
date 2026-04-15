@@ -548,6 +548,11 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
+            },},{id: "teachings-chapter-1-introduction-to-software-engineering",
+          title: 'Chapter 1 - Introduction To Software Engineering',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teaching/software-engineering/chapter-1/";
             },},{id: "teachings-computer-organization",
           title: 'Computer Organization',
           description: "This course develops understanding of how digital logic, instruction execution, memory hierarchy, and processor design shape the behavior of computing systems.",
