@@ -305,6 +305,9 @@
       pulseCounterNode(valueNode);
 
       let currentValue = 0;
+      const frameDelay = 16;
+      const maxFrames = 55;
+      const step = Math.max(1, Math.ceil(safeCount / maxFrames));
       const timer = window.setInterval(() => {
         if (currentValue >= safeCount) {
           window.clearInterval(timer);
@@ -313,10 +316,10 @@
           return;
         }
 
-        currentValue += 1;
+        currentValue = Math.min(currentValue + step, safeCount);
         valueNode.textContent = currentValue.toLocaleString();
         pulseCounterNode(valueNode);
-      }, 10);
+      }, frameDelay);
     };
 
     const metricTickColors = ['#feca57', '#48dbfb', '#1dd1a1', '#ff6b6b', '#a855f7', '#22c55e'];
