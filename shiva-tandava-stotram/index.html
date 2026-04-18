@@ -137,9 +137,10 @@
       target.innerHTML = '<p class="shiva-stotram-error">The stotram could not be loaded right now. Please return to Daily Mantra and try again.</p>';
     }
   });
-</script> </article> </div> </div> <div class="social site-social-strip"> <div class="contact-icons"> <a href="/assets/pdf/Dr-Mritunjay_resume.pdf" title="Cv pdf"><i class="ai ai-cv"></i></a> <a href="mailto:mritunjay.peelam@ddn.upes.ac.in" title="Email"><i class="fa-solid fa-envelope"></i></a> <a href="https://scholar.google.com/citations?user=MdGRPEIAAAAJ" title="Scholar userid" rel="external nofollow noopener" target="_blank"><i class="ai ai-google-scholar"></i></a> <a href="https://orcid.org/0000-0002-8022-3815" title="Orcid id" rel="external nofollow noopener" target="_blank"><i class="ai ai-orcid"></i></a> <a href="https://wa.me/8745080986" title="Whatsapp number" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-whatsapp"></i></a> <a href="https://www.linkedin.com/in/mritunjay-shall-peelam" title="Linkedin username" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-linkedin"></i></a> <a href="https://youtube.com/@msptutorial7884" title="Youtube id" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-youtube"></i></a> </div> <div class="visitor-counter"> <span class="visitor-counter-pill"> <span class="visitor-counter-eye" aria-hidden="true"> <img src="/assets/img/view.gif" alt=""> </span> <span id="visitor-counter-value" class="visitor-counter-value">0</span> </span> <span class="visitor-counter-text"> <span class="visitor-counter-separator" aria-hidden="true"> | </span> <span class="visitor-counter-metric"> Citations : <span id="scholar-citations-value" class="visitor-counter-metric-value" data-static-value="440"> 440 </span> </span> <span class="visitor-counter-separator" aria-hidden="true"> | </span> <span class="visitor-counter-metric"> H-index : <span id="scholar-h-index-value" class="visitor-counter-metric-value" data-static-value="12"> 12 </span> </span> <span class="visitor-counter-separator" aria-hidden="true"> | </span> <span class="visitor-counter-metric"> i10-index : <span id="scholar-i10-index-value" class="visitor-counter-metric-value" data-static-value="13"> 13 </span> </span> </span> </div> <div class="contact-note">The best way to reach me is via email — <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mritunjay.peelam@ddn.upes.ac.in" class="email-link" target="_blank" rel="external nofollow noopener">mritunjay.peelam@ddn.upes.ac.in</a>. </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Dr. Mritunjay Shall Peelam. Last updated: April 18, 2026. </div> </footer> <script type="module">
+</script> </article> </div> </div> <div class="social site-social-strip"> <div class="contact-icons"> <a href="/assets/pdf/Dr-Mritunjay_resume.pdf" title="Cv pdf"><i class="ai ai-cv"></i></a> <a href="mailto:mritunjay.peelam@ddn.upes.ac.in" title="Email"><i class="fa-solid fa-envelope"></i></a> <a href="https://scholar.google.com/citations?user=MdGRPEIAAAAJ" title="Scholar userid" rel="external nofollow noopener" target="_blank"><i class="ai ai-google-scholar"></i></a> <a href="https://orcid.org/0000-0002-8022-3815" title="Orcid id" rel="external nofollow noopener" target="_blank"><i class="ai ai-orcid"></i></a> <a href="https://wa.me/8745080986" title="Whatsapp number" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-whatsapp"></i></a> <a href="https://www.linkedin.com/in/mritunjay-shall-peelam" title="Linkedin username" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-linkedin"></i></a> <a href="https://youtube.com/@msptutorial7884" title="Youtube id" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-youtube"></i></a> </div> <div class="visitor-counter"> <span class="visitor-counter-pill"> <span class="visitor-counter-eye" aria-hidden="true"> <img src="/assets/img/view.gif" alt=""> </span> <span id="visitor-counter-value" class="visitor-counter-value">0</span> </span> <span class="visitor-counter-text"> <span class="visitor-counter-separator" aria-hidden="true"> | </span> <span class="visitor-counter-metric"> Citations : <span id="scholar-citations-value" class="visitor-counter-metric-value" data-static-value="443" data-live-metric="total_citations"> 443 </span> </span> <span class="visitor-counter-separator" aria-hidden="true"> | </span> <span class="visitor-counter-metric"> H-index : <span id="scholar-h-index-value" class="visitor-counter-metric-value" data-static-value="12" data-live-metric="h_index"> 12 </span> </span> <span class="visitor-counter-separator" aria-hidden="true"> | </span> <span class="visitor-counter-metric"> i10-index : <span id="scholar-i10-index-value" class="visitor-counter-metric-value" data-static-value="13" data-live-metric="i10_index"> 13 </span> </span> </span> </div> <div class="contact-note">The best way to reach me is via email — <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mritunjay.peelam@ddn.upes.ac.in" class="email-link" target="_blank" rel="external nofollow noopener">mritunjay.peelam@ddn.upes.ac.in</a>. </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Dr. Mritunjay Shall Peelam. Last updated: April 18, 2026. </div> </footer> <script type="module">
   import { getApp, getApps, initializeApp } from 'https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js';
   import {
+    get,
     getDatabase,
     onValue,
     ref,
@@ -151,6 +152,7 @@
     const scholarCitationsNode = document.getElementById('scholar-citations-value');
     const scholarHIndexNode = document.getElementById('scholar-h-index-value');
     const scholarI10IndexNode = document.getElementById('scholar-i10-index-value');
+    const scholarMetricNodes = [scholarCitationsNode, scholarHIndexNode, scholarI10IndexNode].filter(Boolean);
     const counterScope = "site";
     const configuredCounterId = null;
 
@@ -239,28 +241,60 @@
         return;
       }
 
-      const safeCount = parseCounterValue(count);
-      const duration = 700;
-      const startTime = performance.now();
+      const tickColors = ['#48dbfb', '#1dd1a1', '#feca57', '#ff6b6b', '#a855f7', '#22c55e'];
+      let visitorTickColorIndex = 0;
 
-      valueNode.classList.add('is-animating');
-
-      const step = (currentTime) => {
-        const progress = Math.min((currentTime - startTime) / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        const currentValue = Math.round(safeCount * eased);
-
-        valueNode.textContent = currentValue.toLocaleString();
-
-        if (progress < 1) {
-          window.requestAnimationFrame(step);
-        } else {
-          valueNode.textContent = safeCount.toLocaleString();
-          valueNode.classList.remove('is-animating');
-        }
+      const pulseCounterNode = (node) => {
+        const tickColor = tickColors[visitorTickColorIndex % tickColors.length];
+        visitorTickColorIndex += 1;
+        node.style.setProperty('--counter-tick-color', tickColor);
+        node.style.setProperty('color', tickColor, 'important');
+        node.style.setProperty('-webkit-text-fill-color', tickColor, 'important');
+        node.classList.remove('is-ticking');
+        void node.offsetWidth;
+        node.classList.add('is-ticking');
+        window.setTimeout(() => {
+          node.style.removeProperty('color');
+          node.style.removeProperty('-webkit-text-fill-color');
+        }, 16);
       };
 
-      window.requestAnimationFrame(step);
+      const safeCount = parseCounterValue(count);
+      valueNode.classList.add('is-animating');
+      valueNode.textContent = '0';
+      pulseCounterNode(valueNode);
+
+      let currentValue = 0;
+      const timer = window.setInterval(() => {
+        if (currentValue >= safeCount) {
+          window.clearInterval(timer);
+          valueNode.textContent = safeCount.toLocaleString();
+          valueNode.classList.remove('is-animating');
+          return;
+        }
+
+        currentValue += 1;
+        valueNode.textContent = currentValue.toLocaleString();
+        pulseCounterNode(valueNode);
+      }, 20);
+    };
+
+    const metricTickColors = ['#feca57', '#48dbfb', '#1dd1a1', '#ff6b6b', '#a855f7', '#22c55e'];
+    let metricTickColorIndex = 0;
+
+    const pulseMetricNode = (node) => {
+      const tickColor = metricTickColors[metricTickColorIndex % metricTickColors.length];
+      metricTickColorIndex += 1;
+      node.style.setProperty('--counter-tick-color', tickColor);
+      node.style.setProperty('color', tickColor, 'important');
+      node.style.setProperty('-webkit-text-fill-color', tickColor, 'important');
+      node.classList.remove('is-ticking');
+      void node.offsetWidth;
+      node.classList.add('is-ticking');
+      window.setTimeout(() => {
+        node.style.removeProperty('color');
+        node.style.removeProperty('-webkit-text-fill-color');
+      }, 16);
     };
 
     const renderScholarMetricNode = (node, value) => {
@@ -268,7 +302,32 @@
         return;
       }
 
-      node.textContent = parseCounterValue(value).toLocaleString();
+      const safeValue = parseCounterValue(value);
+      const nextValue = safeValue.toLocaleString();
+      if (node.dataset.renderedValue === String(safeValue)) {
+        return;
+      }
+
+      node.dataset.renderedValue = String(safeValue);
+      node.classList.add('is-animating');
+
+      const frameDelay = 20;
+      let currentValue = safeValue > 0 ? 1 : 0;
+      node.textContent = currentValue.toLocaleString();
+      pulseMetricNode(node);
+
+      const timer = window.setInterval(() => {
+        if (currentValue >= safeValue) {
+          window.clearInterval(timer);
+          node.textContent = nextValue;
+          node.classList.remove('is-animating');
+          return;
+        }
+
+        currentValue += 1;
+        node.textContent = currentValue.toLocaleString();
+        pulseMetricNode(node);
+      }, frameDelay);
     };
 
     const renderScholarMetrics = (metrics) => {
@@ -279,6 +338,21 @@
       renderScholarMetricNode(scholarCitationsNode, metrics.total_citations);
       renderScholarMetricNode(scholarHIndexNode, metrics.h_index);
       renderScholarMetricNode(scholarI10IndexNode, metrics.i10_index);
+    };
+
+    const renderScholarStatus = (payload) => {
+      if (!payload || typeof payload !== 'object') {
+        return;
+      }
+
+      const status = payload.status || 'ok';
+      const checkedText = payload.last_checked ? `Last checked: ${payload.last_checked}` : '';
+      const statusText = status === 'ok' ? 'Google Scholar metrics are live.' : `Google Scholar update status: ${status}`;
+      const errorText = payload.error ? ` ${payload.error}` : '';
+      scholarMetricNodes.forEach((node) => {
+        node.title = `${statusText}${checkedText ? ` ${checkedText}.` : ''}${errorText}`;
+        node.dataset.liveStatus = status;
+      });
     };
 
     renderScholarMetrics({
@@ -385,20 +459,35 @@
         }
       );
 
+      const renderScholarSnapshot = (snapshot) => {
+        if (!snapshot.exists()) {
+          return;
+        }
+
+        const scholarPayload = snapshot.val() || {};
+        renderScholarMetrics(scholarPayload.author_metrics || scholarPayload);
+        renderScholarStatus(scholarPayload);
+      };
+
+      const refreshScholarMetrics = async () => {
+        try {
+          renderScholarSnapshot(await get(scholarMetricsRef));
+        } catch (error) {
+          // Keep the statically rendered fallback values if live Scholar metrics cannot be loaded.
+        }
+      };
+
       onValue(
         scholarMetricsRef,
-        (snapshot) => {
-          if (!snapshot.exists()) {
-            return;
-          }
-
-          const scholarPayload = snapshot.val() || {};
-          renderScholarMetrics(scholarPayload.author_metrics || scholarPayload);
-        },
+        renderScholarSnapshot,
         () => {
           // Keep the statically rendered fallback values if live Scholar metrics cannot be loaded.
         }
       );
+      void refreshScholarMetrics();
+      window.setInterval(() => {
+        void refreshScholarMetrics();
+      }, 5 * 60 * 1000);
 
       let hasQueuedCurrentPageView = false;
       let flushingViews = false;
