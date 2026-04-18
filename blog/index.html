@@ -184,7 +184,7 @@
         currentValue += 1;
         valueNode.textContent = currentValue.toLocaleString();
         pulseCounterNode(valueNode);
-      }, 20);
+      }, 10);
     };
 
     const metricTickColors = ['#feca57', '#48dbfb', '#1dd1a1', '#ff6b6b', '#a855f7', '#22c55e'];
@@ -219,7 +219,7 @@
       node.dataset.renderedValue = String(safeValue);
       node.classList.add('is-animating');
 
-      const frameDelay = 20;
+      const frameDelay = 10;
       let currentValue = safeValue > 0 ? 1 : 0;
       node.textContent = currentValue.toLocaleString();
       pulseMetricNode(node);
