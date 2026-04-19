@@ -86,18 +86,7 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/motivations/";
               },
-            },{id: "post-sunrise-at-the-coast",
-        
-          title: "Sunrise at the Coast",
-        
-        description: "A calm travel note from the shoreline at first light.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/sunrise-at-the-coast/";
-          
-        },
-      },{id: "post-assistant-professor-selection-grade-at-upes-dehradun",
+            },{id: "post-assistant-professor-selection-grade-at-upes-dehradun",
         
           title: "Assistant Professor (Selection Grade) at UPES Dehradun",
         
@@ -108,11 +97,11 @@ ninja.data = [{
             window.location.href = "/blog/2026/upes-selection-grade/";
           
         },
-      },{id: "post-slow-mornings-in-the-hills",
+      },{id: "post-chakarata",
         
-          title: "Slow Mornings in the Hills",
+          title: "Chakarata",
         
-        description: "Reflections from a quiet mountain stay.",
+        description: "चकराता की शांत वादियों, ठंडी हवाओं और पहाड़ी सौंदर्य से जुड़े यादगार अनुभवों की झलक।",
         section: "Posts",
         handler: () => {
           
@@ -130,15 +119,26 @@ ninja.data = [{
             window.location.href = "/blog/2026/iit-guwahati-fdp/";
           
         },
-      },{id: "post-notebook-from-the-road",
+      },{id: "post-kedarnath",
         
-          title: "Notebook from the Road",
+          title: "Kedarnath",
         
-        description: "Small observations, long roads, and meaningful pauses.",
+        description: "केदारनाथ धाम की यात्रा, हिमालय की शांति और भगवान शिव की भक्ति से जुड़े सुंदर अनुभवों की झलक।",
         section: "Posts",
         handler: () => {
           
             window.location.href = "/blog/2026/notebook-from-the-road/";
+          
+        },
+      },{id: "post-badrinath",
+        
+          title: "Badrinath",
+        
+        description: "बद्रीनाथ धाम की शांत यात्रा, हिमालय की दिव्यता और आस्था से भरे अनुभवों की एक छोटी झलक।",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/badrinath/";
           
         },
       },{id: "post-a-post-with-plotly-js",
