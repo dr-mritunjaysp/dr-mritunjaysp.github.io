@@ -72,6 +72,27 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/bhagwatgita/";
               },
+            },{id: "dropdown-ramayan",
+              title: "Ramayan",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/ramayan/";
+              },
+            },{id: "dropdown-quantum-computing",
+              title: "Quantum Computing",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/quantum-computation/";
+              },
+            },{id: "dropdown-blockchain",
+              title: "Blockchain",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/blockchain/";
+              },
             },{id: "dropdown-poems",
               title: "Poems",
               description: "",
