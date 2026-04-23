@@ -1,0 +1,687 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Software Engineering Notes | Dr. Mritunjay Shall Peelam </title> <meta name="author" content="Dr. Mritunjay Shall Peelam"> <meta name="description" content="Assistant Professor (Selection Grade) at UPES Dehradun, researcher in Blockchain, IoT, Edge AI, Federated Learning, and Multimodal Machine Learning. "> <meta name="keywords" content="assistant professor, researcher, blockchain, IoT, edge AI, federated learning, multimodal machine learning"> <meta property="og:site_name" content="Dr. Mritunjay Shall Peelam"> <meta property="og:type" content="website"> <meta property="og:title" content="Dr. Mritunjay Shall Peelam | Software Engineering Notes"> <meta property="og:url" content="https://dr-mritunjaysp.com/teaching/software-engineering/notes/"> <meta property="og:description" content="Assistant Professor (Selection Grade) at UPES Dehradun, researcher in Blockchain, IoT, Edge AI, Federated Learning, and Multimodal Machine Learning. "> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="Software Engineering Notes"> <meta name="twitter:description" content="Assistant Professor (Selection Grade) at UPES Dehradun, researcher in Blockchain, IoT, Edge AI, Federated Learning, and Multimodal Machine Learning. "> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?v=f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?v=62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link id="site-shortcut-icon" rel="shortcut icon" href="/favicon.ico"> <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png"> <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png"> <link id="site-icon" rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> <link rel="manifest" href="/site.webmanifest"> <meta name="theme-color" content="#ffffff"> <link rel="stylesheet" href="/assets/css/main.css?v=d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://dr-mritunjaysp.com/teaching/software-engineering/notes/"> <script src="/assets/js/theme.js?v=5fea5159b787642c1bbc1f334d60f883"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Dr. Mritunjay</span> Shall Peelam </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link nav-home-link" href="/" title="Home" aria-label="Home"> <span class="home-lottie-icon" aria-hidden="true"></span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/blog/">Blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">Projects </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item active"> <a class="nav-link" href="/teaching/">Teaching <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/people/">People </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More <span class="navbar-dropdown-arrow" aria-hidden="true">▾</span> </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/game/">Game</a> <a class="dropdown-item " href="/daily-mantra/">Daily Mantra</a> <a class="dropdown-item " href="/bhagwatgita/">Bhagwatgita</a> <a class="dropdown-item " href="/ramayan/">Ramayan</a> <a class="dropdown-item " href="/quantum-computation/">Quantum Computing</a> <a class="dropdown-item " href="/blockchain/">Blockchain</a> <a class="dropdown-item " href="/poems/">Poems</a> <a class="dropdown-item " href="/motivations/">Motivations</a> </div> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link"> <span>Search</span> <span class="search-lottie-icon" aria-hidden="true"></span> </span> </button> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <span class="theme-toggle-lottie" aria-hidden="true"></span> <span class="sr-only">Change theme</span> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container site-main-container" role="main"> <div class="post"> <header class="post-header"> <p class="post-description"></p> </header> <article> <style>.software-notes-page{margin:0 auto;max-width:62rem}.software-notes-title{background:linear-gradient(90deg,#f59e0b,#ef4444,#ec4899,#06b6d4,#10b981);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;font-size:clamp(2.15rem,5vw,3.35rem);font-weight:800;line-height:1.12;margin-bottom:1rem}.software-notes-panel{background:linear-gradient(var(--global-card-bg-color),var(--global-card-bg-color)) padding-box,linear-gradient(135deg,#06b6d4,#10b981,#f59e0b,#ec4899) border-box;border:1.5px solid transparent;border-radius:.95rem;box-shadow:0 14px 28px rgba(0,0,0,0.14);margin-bottom:1.25rem;padding:1.15rem 1.25rem}.software-notes-panel h2{font-size:1.2rem;font-weight:800;margin-bottom:.65rem}.software-notes-panel p,.software-notes-panel li{line-height:1.7;text-align:justify}.software-notes-list{display:grid;gap:1rem}.software-note-unit{border-top:0;padding-top:1rem;position:relative}.software-note-unit:first-child{padding-top:0}.software-note-unit:not(:first-child)::before{background:linear-gradient(90deg,rgba(6,182,212,0),#06b6d4 18%,#10b981 38%,#f59e0b 62%,#ec4899 82%,rgba(236,72,153,0));border-radius:999px;content:"";height:1px;left:0;opacity:.9;position:absolute;right:0;top:0}.software-note-unit h3{font-size:1.04rem;font-weight:800;margin-bottom:.45rem}.software-note-actions{align-items:center;display:flex;flex-wrap:wrap;gap:1rem;margin-top:.65rem}.software-note-link{align-items:center;color:var(--global-theme-color);display:inline-flex;font-weight:800;gap:.5rem;line-height:1;text-decoration:none;transition:opacity .2s ease}.software-note-link:hover{opacity:.82;text-decoration:underline}.software-note-view{align-items:center;display:inline-flex;font-weight:800;gap:.35rem;line-height:1;transition:transform .22s ease}.software-note-view.is-counting{transform:translateY(-2px)}.software-note-view-eye{align-items:center;display:inline-flex;justify-content:center;margin-right:-0.15rem;width:2.55rem}.software-note-view-eye img{display:block;height:1.75rem;object-fit:contain;width:2.45rem}.software-note-view-count{color:#f59e0b;font-size:1rem;min-width:1.35rem;text-align:right}.software-note-view-label{color:var(--global-text-color-light);font-size:.82rem}</style> <div class="software-notes-page"> <h1 class="software-notes-title">Software Engineering Notes</h1> <section class="software-notes-panel"> <h2>Unit Notes</h2> <div class="software-notes-list"> <article class="software-note-unit"> <h3>Unit I: Introduction to Software Engineering</h3> <p> Definition of Software Engineering, S/W characteristics, applications, Software development life cycle; Life Cycle Models - Waterfall (classical and iterative), Spiral, Prototyping &amp; RAD Models, Software processes, Process Models - overview Agile Model and Various Agile methodologies - Scrum, XP, Lean, and Kanban. Scope of each model and their comparison in real-world case studies. </p> <div class="software-note-actions"> <a class="software-note-link" href="/assets/pdf/software-engineering-unit-1.pdf" data-note-id="unit-1"> <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> <span>Open Unit-1 PDF</span> </a> <span class="software-note-view" data-note-view="unit-1"> <span class="software-note-view-eye" aria-hidden="true"><img src="/assets/img/view.gif" alt=""></span> <span class="software-note-view-count" data-note-view-count="unit-1">0</span> <span class="software-note-view-label">Views</span> </span> </div> </article> <article class="software-note-unit"> <h3>Unit II: Requirements Modelling and Design</h3> <p> System and software requirements; Requirements Engineering - Crucial steps; types of requirements, Functional and non-functional requirements; Domain requirements; User requirements; Elicitation and analysis of requirements; Requirements documentation - Nature of Software, Software requirements specification, Use case diagrams with guidelines, DFD, SRS Structure, SRS Case study, Design concepts and principles - Abstraction - Refinement - Modularity, Cohesion, coupling, Architectural design, Detailed Design Transaction Transformation, Refactoring of designs, Object-oriented Design, User-Interface Design. </p> <div class="software-note-actions"> <a class="software-note-link" href="/assets/pdf/software-engineering-unit-2.pdf" data-note-id="unit-2"> <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> <span>Open Unit-2 PDF</span> </a> <span class="software-note-view" data-note-view="unit-2"> <span class="software-note-view-eye" aria-hidden="true"><img src="/assets/img/view.gif" alt=""></span> <span class="software-note-view-count" data-note-view-count="unit-2">0</span> <span class="software-note-view-label">Views</span> </span> </div> </article> <article class="software-note-unit"> <h3>Unit III: Software Reliability</h3> <p> Introduction to Software Reliability; Hardware reliability vs. Software reliability; Reliability metrics; Failure and Faults - Prevention, Removal, Tolerance, Forecast; Dependability Concept - Failure Behavior, Characteristics, Maintenance Policy; Reliability and Availability Modeling; Reliability Evaluation Testing methods, Limits, Starvation, Coverage, Filtering; Microscopic Model of Software Risk; Classes of software reliability Models; Statistical reliability models; Reliability growth models; Defining and interpreting reliability metrics; Fault Detection and Prevention; Techniques for detecting and mitigating software faults; Static analysis tools and techniques; Dynamic analysis methods; Software Fault Tolerance; Software Maintenance and Reliability; Reliability Assessment and Evaluation; Methods for assessing and quantifying software reliability; Case Studies and Real-world Applications. </p> <div class="software-note-actions"> <a class="software-note-link" href="/assets/pdf/software-engineering-unit-3.pdf" data-note-id="unit-3"> <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> <span>Open Unit-3 PDF</span> </a> <span class="software-note-view" data-note-view="unit-3"> <span class="software-note-view-eye" aria-hidden="true"><img src="/assets/img/view.gif" alt=""></span> <span class="software-note-view-count" data-note-view-count="unit-3">0</span> <span class="software-note-view-label">Views</span> </span> </div> </article> <article class="software-note-unit"> <h3>Unit IV: Software Testing, Metrics and Quality Assurance</h3> <p> Testing types and techniques such as black box, white box, and gray box testing, functional and structural testing; Test-driven development, code coverage, and quality metrics; Testing process, design of Test cases, testing techniques - boundary value analysis - equivalence class testing - decision table testing, cause-effect graphing, path testing, data flow testing, and mutation testing. Unit, integration, system, alpha, and beta testing, debugging techniques; verification and validation techniques, levels of testing, regression testing, quality management activities, product and process quality standards (ISO9000, CMM), metrics understanding (process, product, project metrics), size metrics (LOC, Function Count, Albrecht FPA), product metrics, metrics for software maintenance, cost estimation techniques (static, single variable, multivariable models), cost-benefit evaluation techniques, Testing tools and standards such as Jira and Selenium, test automation frameworks and tools (Selenium, Appium, JUnit), performance testing and load testing, and defect management and root cause analysis. </p> <div class="software-note-actions"> <a class="software-note-link" href="/assets/pdf/software-engineering-unit-4-size-and-cost.pdf" data-note-id="unit-4-size-cost"> <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> <span>Open Unit-4 Size and Cost PDF</span> </a> <span class="software-note-view" data-note-view="unit-4-size-cost"> <span class="software-note-view-eye" aria-hidden="true"><img src="/assets/img/view.gif" alt=""></span> <span class="software-note-view-count" data-note-view-count="unit-4-size-cost">0</span> <span class="software-note-view-label">Views</span> </span> </div> </article> <article class="software-note-unit"> <h3>Unit IV: Software Testing PDF</h3> <p> Additional Unit IV testing notes covering testing techniques, test case design, testing levels, debugging, verification, validation, automation tools, defect handling, and quality-focused testing practices. </p> <div class="software-note-actions"> <a class="software-note-link" href="/assets/pdf/software-engineering-unit-4-testing.pdf" data-note-id="unit-4-testing"> <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> <span>Open Unit-4 Testing PDF</span> </a> <span class="software-note-view" data-note-view="unit-4-testing"> <span class="software-note-view-eye" aria-hidden="true"><img src="/assets/img/view.gif" alt=""></span> <span class="software-note-view-count" data-note-view-count="unit-4-testing">0</span> <span class="software-note-view-label">Views</span> </span> </div> </article> <article class="software-note-unit"> <h3>Unit V: Software Quality and Risk Management</h3> <p> McCall quality factors, ISO and CMM Model, Tools and Techniques for Quality Control, Pareto Analysis, Statistical Sampling, Quality Control Charts and the seven Run Rule. Modern Quality Management, Risk Management - importance, types, process and phases, qualitative and quantitative risk analysis, Risk Analysis and Assessment, Risk Strategies, Risk Monitoring and Control, Risk Response and Evaluation. Software Reliability: Reliability Metrics, Reliability Growth Modeling. Use Case: Defect Tracking and Management. Test Automation Tools: Jira, Selenium, Appium; JUnit. </p> <div class="software-note-actions"> <a class="software-note-link" href="/assets/pdf/software-engineering-unit-5-quality-and-risk-management.pdf" data-note-id="unit-5"> <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> <span>Open Unit-5 PDF</span> </a> <span class="software-note-view" data-note-view="unit-5"> <span class="software-note-view-eye" aria-hidden="true"><img src="/assets/img/view.gif" alt=""></span> <span class="software-note-view-count" data-note-view-count="unit-5">0</span> <span class="software-note-view-label">Views</span> </span> </div> </article> </div> </section> </div> <script type="module">
+  import { getApp, getApps, initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+  import { getDatabase, onValue, ref, runTransaction } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
+
+  (() => {
+    const noteLinks = Array.from(document.querySelectorAll("[data-note-id]"));
+    if (!noteLinks.length) return;
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDaV2ARQU9EwLKo3mN02VoIiwm4w7jksOo",
+      authDomain: "portfolio-6a1b9.firebaseapp.com",
+      databaseURL: "https://portfolio-6a1b9-default-rtdb.firebaseio.com",
+      projectId: "portfolio-6a1b9",
+      appId: "1:604162259556:web:9388758fb2a3c61d977d71",
+    };
+
+    const hasFirebaseConfig = Object.values(firebaseConfig).every(
+      (value) => value && !String(value).includes("YOUR_")
+    );
+    const database = hasFirebaseConfig
+      ? getDatabase(getApps().length ? getApp() : initializeApp(firebaseConfig))
+      : null;
+    const counterRoot = "visitor-counter/unit-notes/software-engineering";
+    const storagePrefix = "software-engineering-note-view:";
+    const renderedCounts = new Map();
+
+    const parseCount = (value) => {
+      if (Number.isFinite(value)) return Math.max(0, Math.floor(value));
+      if (typeof value === "string") {
+        const parsedValue = Number(value);
+        return Number.isFinite(parsedValue) ? Math.max(0, Math.floor(parsedValue)) : 0;
+      }
+      if (value && typeof value === "object") return parseCount(value.count);
+      return 0;
+    };
+
+    const readLocalCount = (noteId) => {
+      try {
+        return Number(window.localStorage.getItem(`${storagePrefix}${noteId}`)) || 0;
+      } catch (error) {
+        return 0;
+      }
+    };
+
+    const writeLocalCount = (noteId, value) => {
+      try {
+        window.localStorage.setItem(`${storagePrefix}${noteId}`, String(Number(value) || 0));
+      } catch (error) {
+        // Keep the visible counter working even if storage is unavailable.
+      }
+    };
+
+    const updateCount = (noteId, value) => {
+      const safeValue = parseCount(value);
+      renderedCounts.set(noteId, safeValue);
+      writeLocalCount(noteId, safeValue);
+      document.querySelectorAll(`[data-note-view-count="${noteId}"]`).forEach((countNode) => {
+        countNode.textContent = safeValue.toLocaleString("en-IN");
+        countNode.closest("[data-note-view]")?.classList.add("is-counting");
+        window.setTimeout(() => {
+          countNode.closest("[data-note-view]")?.classList.remove("is-counting");
+        }, 320);
+      });
+    };
+
+    const countNoteView = (noteId) => {
+      const currentVisibleCount = Math.max(renderedCounts.get(noteId) || 0, readLocalCount(noteId));
+      const nextOptimisticCount = currentVisibleCount + 1;
+      updateCount(noteId, nextOptimisticCount);
+      if (!database) return;
+
+      runTransaction(ref(database, `${counterRoot}/${noteId}/views`), (currentValue) => {
+        const currentCount = Math.max(parseCount(currentValue), currentVisibleCount);
+        return {
+          count: currentCount + 1,
+          updated_at: new Date().toISOString(),
+        };
+      }).catch(() => {});
+    };
+
+    noteLinks.forEach((link) => {
+      const noteId = link.dataset.noteId;
+      if (!noteId) return;
+
+      updateCount(noteId, readLocalCount(noteId));
+      if (database) {
+        onValue(ref(database, `${counterRoot}/${noteId}/views`), (snapshot) => {
+          const firebaseCount = parseCount(snapshot.val());
+          updateCount(noteId, Math.max(firebaseCount, readLocalCount(noteId)));
+        });
+      }
+
+      link.addEventListener("click", (event) => {
+        if (!event.isTrusted) return;
+        countNoteView(noteId);
+      });
+    });
+  })();
+</script> </article> </div> </div> <div class="social site-social-strip"> <div class="contact-icons"> <a href="/assets/pdf/Dr-Mritunjay_resume.pdf" title="Cv pdf"><i class="ai ai-cv"></i></a> <a href="mailto:mritunjay.peelam@ddn.upes.ac.in" title="Email"><i class="fa-solid fa-envelope"></i></a> <a href="https://scholar.google.com/citations?user=MdGRPEIAAAAJ" title="Scholar userid" rel="external nofollow noopener" target="_blank"><i class="ai ai-google-scholar"></i></a> <a href="https://orcid.org/0000-0002-8022-3815" title="Orcid id" rel="external nofollow noopener" target="_blank"><i class="ai ai-orcid"></i></a> <a href="https://wa.me/8745080986" title="Whatsapp number" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-whatsapp"></i></a> <a href="https://www.linkedin.com/in/mritunjay-shall-peelam" title="Linkedin username" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-linkedin"></i></a> <a href="https://youtube.com/@msptutorial7884" title="Youtube id" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-youtube"></i></a> </div> <div class="visitor-counter"> <span class="visitor-counter-pill"> <span class="visitor-counter-eye" aria-hidden="true"> <img src="/assets/img/view.gif" alt=""> </span> <span id="visitor-counter-value" class="visitor-counter-value">0</span> </span> <span class="visitor-counter-text"> <span class="visitor-counter-separator" aria-hidden="true"> | </span> <span class="visitor-counter-metric"> Citations : <span id="scholar-citations-value" class="visitor-counter-metric-value" data-static-value="457" data-live-metric="total_citations"> 457 </span> </span> <span class="visitor-counter-separator" aria-hidden="true"> | </span> <span class="visitor-counter-metric"> H-index : <span id="scholar-h-index-value" class="visitor-counter-metric-value" data-static-value="12" data-live-metric="h_index"> 12 </span> </span> <span class="visitor-counter-separator" aria-hidden="true"> | </span> <span class="visitor-counter-metric"> i10-index : <span id="scholar-i10-index-value" class="visitor-counter-metric-value" data-static-value="13" data-live-metric="i10_index"> 13 </span> </span> </span> </div> <div class="contact-note">The best way to reach me is via email — <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mritunjay.peelam@ddn.upes.ac.in" class="email-link" target="_blank" rel="external nofollow noopener">mritunjay.peelam@ddn.upes.ac.in</a>. </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Dr. Mritunjay Shall Peelam. Last updated: April 23, 2026. </div> </footer> <script type="module">
+  import { getApp, getApps, initializeApp } from 'https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js';
+  import {
+    get,
+    getDatabase,
+    onValue,
+    ref,
+    runTransaction,
+  } from 'https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js';
+
+  document.addEventListener('DOMContentLoaded', async function () {
+    const valueNode = document.getElementById('visitor-counter-value');
+    const scholarCitationsNode = document.getElementById('scholar-citations-value');
+    const scholarHIndexNode = document.getElementById('scholar-h-index-value');
+    const scholarI10IndexNode = document.getElementById('scholar-i10-index-value');
+    const scholarMetricNodes = [scholarCitationsNode, scholarHIndexNode, scholarI10IndexNode].filter(Boolean);
+    const counterScope = "site";
+    const configuredCounterId = null;
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDaV2ARQU9EwLKo3mN02VoIiwm4w7jksOo",
+      authDomain: "portfolio-6a1b9.firebaseapp.com",
+      databaseURL: "https://portfolio-6a1b9-default-rtdb.firebaseio.com",
+      projectId: "portfolio-6a1b9",
+      appId: "1:604162259556:web:9388758fb2a3c61d977d71",
+    };
+
+    const isConfigured = Object.values(firebaseConfig).every(
+      (value) => value && !String(value).includes('YOUR_')
+    );
+
+    if (!isConfigured) {
+      if (valueNode) {
+        valueNode.textContent = 'Set Firebase';
+      }
+      return;
+    }
+
+    const parseCounterValue = (value) => {
+      if (Number.isFinite(value)) {
+        return Math.max(0, Math.floor(value));
+      }
+
+      if (typeof value === 'string') {
+        const asNumber = Number(value);
+        if (Number.isFinite(asNumber)) {
+          return Math.max(0, Math.floor(asNumber));
+        }
+
+        if (value.includes('[object Object]')) {
+          const recovered = value.replaceAll('[object Object]', '');
+          if (/^\d+$/.test(recovered) && recovered.length > 0) {
+            const allDigitsSame = recovered.split('').every((digit) => digit === recovered[0]);
+            if (allDigitsSame) {
+              return recovered.length;
+            }
+          }
+
+          const recoveredNumber = Number(recovered);
+          if (Number.isFinite(recoveredNumber)) {
+            return Math.max(0, Math.floor(recoveredNumber));
+          }
+        }
+
+        const digits = value.match(/\d+/g);
+        if (digits && digits.length > 0) {
+          const recovered = Number(digits.join(''));
+          if (Number.isFinite(recovered)) {
+            return Math.max(0, Math.floor(recovered));
+          }
+        }
+
+        return 0;
+      }
+
+      if (Array.isArray(value)) {
+        let sum = 0;
+        for (let i = 0; i < value.length; i += 1) {
+          sum += parseCounterValue(value[i]);
+        }
+        return sum;
+      }
+
+      if (value && typeof value === 'object') {
+        if (Object.prototype.hasOwnProperty.call(value, 'count')) {
+          return parseCounterValue(value.count);
+        }
+
+        const objectValues = Object.values(value);
+        let sum = 0;
+        for (let i = 0; i < objectValues.length; i += 1) {
+          sum += parseCounterValue(objectValues[i]);
+        }
+        return sum;
+      }
+
+      return 0;
+    };
+
+    const animateValue = (count) => {
+      if (!valueNode) {
+        return;
+      }
+
+      const tickColors = ['#48dbfb', '#1dd1a1', '#feca57', '#ff6b6b', '#a855f7', '#22c55e'];
+      let visitorTickColorIndex = 0;
+
+      const pulseCounterNode = (node) => {
+        const tickColor = tickColors[visitorTickColorIndex % tickColors.length];
+        visitorTickColorIndex += 1;
+        node.style.setProperty('--counter-tick-color', tickColor);
+        node.style.setProperty('color', tickColor, 'important');
+        node.style.setProperty('-webkit-text-fill-color', tickColor, 'important');
+        node.classList.remove('is-ticking');
+        void node.offsetWidth;
+        node.classList.add('is-ticking');
+        window.setTimeout(() => {
+          node.style.removeProperty('color');
+          node.style.removeProperty('-webkit-text-fill-color');
+        }, 16);
+      };
+
+      const safeCount = parseCounterValue(count);
+      valueNode.classList.add('is-animating');
+      valueNode.textContent = '0';
+      pulseCounterNode(valueNode);
+
+      let currentValue = 0;
+      const frameDelay = 16;
+      const maxFrames = 55;
+      const step = Math.max(1, Math.ceil(safeCount / maxFrames));
+      const timer = window.setInterval(() => {
+        if (currentValue >= safeCount) {
+          window.clearInterval(timer);
+          valueNode.textContent = safeCount.toLocaleString();
+          valueNode.classList.remove('is-animating');
+          return;
+        }
+
+        currentValue = Math.min(currentValue + step, safeCount);
+        valueNode.textContent = currentValue.toLocaleString();
+        pulseCounterNode(valueNode);
+      }, frameDelay);
+    };
+
+    const metricTickColors = ['#feca57', '#48dbfb', '#1dd1a1', '#ff6b6b', '#a855f7', '#22c55e'];
+    let metricTickColorIndex = 0;
+
+    const pulseMetricNode = (node) => {
+      const tickColor = metricTickColors[metricTickColorIndex % metricTickColors.length];
+      metricTickColorIndex += 1;
+      node.style.setProperty('--counter-tick-color', tickColor);
+      node.style.setProperty('color', tickColor, 'important');
+      node.style.setProperty('-webkit-text-fill-color', tickColor, 'important');
+      node.classList.remove('is-ticking');
+      void node.offsetWidth;
+      node.classList.add('is-ticking');
+      window.setTimeout(() => {
+        node.style.removeProperty('color');
+        node.style.removeProperty('-webkit-text-fill-color');
+      }, 16);
+    };
+
+    const renderScholarMetricNode = (node, value) => {
+      if (!node) {
+        return;
+      }
+
+      const safeValue = parseCounterValue(value);
+      const nextValue = safeValue.toLocaleString();
+      if (node.dataset.renderedValue === String(safeValue)) {
+        return;
+      }
+
+      node.dataset.renderedValue = String(safeValue);
+      node.classList.add('is-animating');
+
+      const frameDelay = 10;
+      let currentValue = safeValue > 0 ? 1 : 0;
+      node.textContent = currentValue.toLocaleString();
+      pulseMetricNode(node);
+
+      const timer = window.setInterval(() => {
+        if (currentValue >= safeValue) {
+          window.clearInterval(timer);
+          node.textContent = nextValue;
+          node.classList.remove('is-animating');
+          return;
+        }
+
+        currentValue += 1;
+        node.textContent = currentValue.toLocaleString();
+        pulseMetricNode(node);
+      }, frameDelay);
+    };
+
+    const renderScholarMetrics = (metrics) => {
+      if (!metrics || typeof metrics !== 'object') {
+        return;
+      }
+
+      renderScholarMetricNode(scholarCitationsNode, metrics.total_citations);
+      renderScholarMetricNode(scholarHIndexNode, metrics.h_index);
+      renderScholarMetricNode(scholarI10IndexNode, metrics.i10_index);
+    };
+
+    const renderScholarStatus = (payload) => {
+      if (!payload || typeof payload !== 'object') {
+        return;
+      }
+
+      const status = payload.status || 'ok';
+      const checkedText = payload.last_checked ? `Last checked: ${payload.last_checked}` : '';
+      const statusText = status === 'ok' ? 'Google Scholar metrics are live.' : `Google Scholar update status: ${status}`;
+      const errorText = payload.error ? ` ${payload.error}` : '';
+      scholarMetricNodes.forEach((node) => {
+        node.title = `${statusText}${checkedText ? ` ${checkedText}.` : ''}${errorText}`;
+        node.dataset.liveStatus = status;
+      });
+    };
+
+    const normalizeScholarMetricsPayload = (payload) => {
+      if (!payload || typeof payload !== 'object') {
+        return null;
+      }
+
+      const source =
+        payload.author_metrics && typeof payload.author_metrics === 'object'
+          ? payload.author_metrics
+          : payload;
+
+      return {
+        total_citations: source.total_citations ?? source.citations ?? source.citation_count,
+        h_index: source.h_index ?? source.hindex ?? source.hIndex,
+        i10_index: source.i10_index ?? source.i10index ?? source.i10Index,
+      };
+    };
+
+    renderScholarMetrics({
+      total_citations: scholarCitationsNode?.dataset?.staticValue,
+      h_index: scholarHIndexNode?.dataset?.staticValue,
+      i10_index: scholarI10IndexNode?.dataset?.staticValue,
+    });
+
+    const normalizeCounterKey = (value) => {
+      const normalized = String(value || '')
+        .toLowerCase()
+        .replace(/^https?:\/\//, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+
+      return normalized || 'home';
+    };
+
+    const currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
+    const pageCounterId = configuredCounterId || normalizeCounterKey(currentPath === '/' ? 'home' : currentPath);
+    const currentScope = String(counterScope || 'site').toLowerCase() === 'page' ? 'page' : 'site';
+    const viewsCounterPath =
+      currentScope === 'page'
+        ? `visitor-counter/pages/${pageCounterId}/views`
+        : 'visitor-counter/site-total-views';
+    const clicksCounterPath =
+      currentScope === 'page'
+        ? `visitor-counter/pages/${pageCounterId}/clicks`
+        : 'visitor-counter/site-total-clicks';
+    const scholarMetricsPath = 'visitor-counter/scholar-metrics/current';
+    const pendingViewsStorageKey =
+      currentScope === 'page'
+        ? `visitor-counter:pending-views:page:${pageCounterId}`
+        : 'visitor-counter:pending-views:site-total';
+    const pendingClicksStorageKey =
+      currentScope === 'page'
+        ? `visitor-counter:pending-clicks:page:${pageCounterId}`
+        : 'visitor-counter:pending-clicks:site-total';
+
+    const getPendingCount = (storageKey) => {
+      try {
+        return parseCounterValue(window.localStorage.getItem(storageKey));
+      } catch (error) {
+        return 0;
+      }
+    };
+
+    const setPendingCount = (storageKey, count) => {
+      try {
+        const safeCount = parseCounterValue(count);
+        if (safeCount <= 0) {
+          window.localStorage.removeItem(storageKey);
+        } else {
+          window.localStorage.setItem(storageKey, String(safeCount));
+        }
+      } catch (error) {
+        // Ignore storage failures and continue attempting live syncs.
+      }
+    };
+
+    try {
+      const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
+      const database = getDatabase(app);
+      const viewsCounterRef = ref(database, viewsCounterPath);
+      const clicksCounterRef = ref(database, clicksCounterPath);
+      const scholarMetricsRef = ref(database, scholarMetricsPath);
+      let latestViewsCount = 0;
+      let latestClicksCount = 0;
+      let lastRenderedTotal = null;
+      let lastScholarPayloadSignature = null;
+
+      const renderCombinedTotal = () => {
+        const total =
+          latestViewsCount +
+          latestClicksCount +
+          getPendingCount(pendingViewsStorageKey) +
+          getPendingCount(pendingClicksStorageKey);
+        if (lastRenderedTotal === null || total !== lastRenderedTotal) {
+          animateValue(total);
+          lastRenderedTotal = total;
+        }
+      };
+
+      onValue(
+        viewsCounterRef,
+        (snapshot) => {
+          latestViewsCount = parseCounterValue(snapshot.exists() ? snapshot.val() : 0);
+          renderCombinedTotal();
+        },
+        () => {
+          latestViewsCount = 0;
+          renderCombinedTotal();
+        }
+      );
+
+      onValue(
+        clicksCounterRef,
+        (snapshot) => {
+          latestClicksCount = parseCounterValue(snapshot.exists() ? snapshot.val() : 0);
+          renderCombinedTotal();
+        },
+        () => {
+          latestClicksCount = 0;
+          renderCombinedTotal();
+        }
+      );
+
+      const renderScholarSnapshot = (snapshot) => {
+        if (!snapshot.exists()) {
+          return;
+        }
+
+        const scholarPayload = snapshot.val() || {};
+        const scholarPayloadSignature = JSON.stringify(normalizeScholarMetricsPayload(scholarPayload));
+        renderScholarMetrics(normalizeScholarMetricsPayload(scholarPayload));
+        renderScholarStatus(scholarPayload);
+
+        if (lastScholarPayloadSignature === null) {
+          lastScholarPayloadSignature = scholarPayloadSignature;
+        } else if (scholarPayloadSignature !== lastScholarPayloadSignature) {
+          window.location.reload();
+        }
+      };
+
+      const refreshScholarMetrics = async () => {
+        try {
+          renderScholarSnapshot(await get(scholarMetricsRef));
+        } catch (error) {
+          // Keep the statically rendered fallback values if live Scholar metrics cannot be loaded.
+        }
+      };
+
+      onValue(
+        scholarMetricsRef,
+        renderScholarSnapshot,
+        () => {
+          // Keep the statically rendered fallback values if live Scholar metrics cannot be loaded.
+        }
+      );
+      void refreshScholarMetrics();
+      window.setInterval(() => {
+        void refreshScholarMetrics();
+      }, 5 * 60 * 1000);
+
+      window.addEventListener('focus', () => {
+        void refreshScholarMetrics();
+      });
+
+      let hasQueuedCurrentPageView = false;
+      let flushingViews = false;
+      let flushingClicks = false;
+
+      const flushPendingViews = async () => {
+        if (flushingViews) {
+          return;
+        }
+
+        const delta = getPendingCount(pendingViewsStorageKey);
+        if (delta <= 0) {
+          return;
+        }
+
+        flushingViews = true;
+
+        try {
+          const result = await runTransaction(viewsCounterRef, (currentValue) => {
+            const nextCount = parseCounterValue(currentValue) + delta;
+            return {
+              count: nextCount,
+              updated_at: new Date().toISOString(),
+            };
+          });
+
+          latestViewsCount = parseCounterValue(result.snapshot.exists() ? result.snapshot.val() : 0);
+          const remainingViews = Math.max(0, getPendingCount(pendingViewsStorageKey) - delta);
+          setPendingCount(pendingViewsStorageKey, remainingViews);
+          renderCombinedTotal();
+        } catch (error) {
+          // Keep pending page views in localStorage so they can sync on the next page load/online event.
+        } finally {
+          flushingViews = false;
+          if (getPendingCount(pendingViewsStorageKey) > 0) {
+            window.setTimeout(() => {
+              void flushPendingViews();
+            }, 800);
+          }
+        }
+      };
+
+      const flushPendingClicks = async () => {
+        if (flushingClicks) {
+          return;
+        }
+
+        const delta = getPendingCount(pendingClicksStorageKey);
+        if (delta <= 0) {
+          return;
+        }
+
+        flushingClicks = true;
+
+        try {
+          const result = await runTransaction(clicksCounterRef, (currentValue) => {
+            const nextCount = parseCounterValue(currentValue) + delta;
+            return {
+              count: nextCount,
+              updated_at: new Date().toISOString(),
+            };
+          });
+
+          latestClicksCount = parseCounterValue(result.snapshot.exists() ? result.snapshot.val() : 0);
+          const remainingClicks = Math.max(0, getPendingCount(pendingClicksStorageKey) - delta);
+          setPendingCount(pendingClicksStorageKey, remainingClicks);
+          renderCombinedTotal();
+        } catch (error) {
+          // Keep pending clicks in localStorage so they can sync on the next click/online event.
+        } finally {
+          flushingClicks = false;
+          if (getPendingCount(pendingClicksStorageKey) > 0) {
+            window.setTimeout(() => {
+              void flushPendingClicks();
+            }, 800);
+          }
+        }
+      };
+
+      const queuePageView = () => {
+        if (hasQueuedCurrentPageView) {
+          return;
+        }
+
+        hasQueuedCurrentPageView = true;
+        setPendingCount(pendingViewsStorageKey, getPendingCount(pendingViewsStorageKey) + 1);
+        renderCombinedTotal();
+        void flushPendingViews();
+      };
+
+      const queueClick = () => {
+        setPendingCount(pendingClicksStorageKey, getPendingCount(pendingClicksStorageKey) + 1);
+        renderCombinedTotal();
+        void flushPendingClicks();
+      };
+
+      if (getPendingCount(pendingViewsStorageKey) > 0) {
+        void flushPendingViews();
+      }
+
+      if (getPendingCount(pendingClicksStorageKey) > 0) {
+        void flushPendingClicks();
+      }
+
+      queuePageView();
+
+      document.addEventListener(
+        'click',
+        (event) => {
+          if (!event.isTrusted) {
+            return;
+          }
+
+          queueClick();
+        },
+        { passive: true, capture: true }
+      );
+
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState !== 'visible') {
+          return;
+        }
+
+        void refreshScholarMetrics();
+        if (getPendingCount(pendingViewsStorageKey) > 0) {
+          void flushPendingViews();
+        }
+        if (getPendingCount(pendingClicksStorageKey) > 0) {
+          void flushPendingClicks();
+        }
+      });
+
+      window.addEventListener('pagehide', () => {
+        if (getPendingCount(pendingViewsStorageKey) > 0) {
+          void flushPendingViews();
+        }
+        if (getPendingCount(pendingClicksStorageKey) > 0) {
+          void flushPendingClicks();
+        }
+      });
+
+      window.addEventListener('online', () => {
+        if (getPendingCount(pendingViewsStorageKey) > 0) {
+          void flushPendingViews();
+        }
+        if (getPendingCount(pendingClicksStorageKey) > 0) {
+          void flushPendingClicks();
+        }
+      });
+    } catch (error) {
+      if (valueNode) {
+        valueNode.textContent = '0';
+      }
+    }
+  });
+</script> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?v=85ddb88934d28b74e78031fd54cf8308"></script> <script src="/assets/js/no_defer.js?v=2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?v=c15de51d4bb57887caa2c21988d97279"></script> <script defer src="/assets/js/audio-no-highlight.js?v=a41753492928ea136f683865dea74b61"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=d9f17b6adc2311cbabd747f4538bb15f"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/js/mathjax-setup.js?v=a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script defer src="/assets/js/progress-bar.js?v=722b1a9ca20f27a9829146f5512b88b9" type="text/javascript"></script> <script src="/assets/js/vanilla-back-to-top.min.js?v=f40d453793ff4f64e238e420181a1d17"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/js/search/ninja-keys.min.js?v=a3446f084dcaecc5f75aa1757d087dcf"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/js/search-setup.js?v=6c304f7b1992d4b60f7a07956e52f04a"></script> <script src="/assets/js/search-data.js"></script> <script src="/assets/js/shortcut-key.js?v=ccc841c459bfc0e64c1c2b5acd10df02"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script> <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof lottie === 'undefined') return;
+
+    const homeIcon = document.querySelector('.home-lottie-icon');
+    if (homeIcon && homeIcon.dataset.lottieLoaded !== 'true') {
+      lottie.loadAnimation({
+        container: homeIcon,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: "/assets/json/home-button.json",
+        name: 'navbar-home-icon',
+      });
+
+      homeIcon.dataset.lottieLoaded = 'true';
+    }
+
+    const searchIcon = document.querySelector('.search-lottie-icon');
+    if (searchIcon && searchIcon.dataset.lottieLoaded !== 'true') {
+      lottie.loadAnimation({
+        container: searchIcon,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: "/assets/json/search-icon.json",
+        name: 'navbar-search-icon',
+      });
+
+      searchIcon.dataset.lottieLoaded = 'true';
+    }
+
+    const themeToggleIcon = document.querySelector('.theme-toggle-lottie');
+    if (themeToggleIcon && themeToggleIcon.dataset.lottieLoaded !== 'true') {
+      lottie.loadAnimation({
+        container: themeToggleIcon,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: "/assets/json/theme-toggle.json",
+        name: 'navbar-theme-toggle-icon',
+      });
+
+      themeToggleIcon.dataset.lottieLoaded = 'true';
+    }
+  });
+</script> </body> </html>

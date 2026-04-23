@@ -594,6 +594,11 @@ ninja.data = [{
           description: "This course introduces the principles of process management, memory organization, scheduling, synchronization, and resource control in modern operating systems.",
           section: "Teachings",handler: () => {
               window.location.href = "/teaching/operating-systems/";
+            },},{id: "teachings-software-engineering-notes",
+          title: 'Software Engineering Notes',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teaching/software-engineering/notes/";
             },},{
         id: 'social-cv',
         title: 'CV',
